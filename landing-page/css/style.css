@@ -128,6 +128,7 @@ h3 {
 	width: 100%;
 	color: grey;
 }
+
 /*styling the application form button*/
 .application-form button {
 	background-color: #57eeab;
@@ -335,6 +336,7 @@ footer .social {
 	footer .calculator form button {
 		grid-column: 4 / 6;
 		grid-row: 1;
+		font-size: 1.3rem;
 	}
 }
 
