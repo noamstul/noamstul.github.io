@@ -21,7 +21,7 @@
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="contact.html">contact</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -29,26 +29,43 @@
         <main>
             <div class="home-banner">
                 <div class="banner-text" id="banner-text">
-                    <h1>Discover Your ARC</h1>
+                    <h1>Discover Your ARC.</h1>
                     <p>With Algonquin College's newest facility, there's always something for everyone to discover and enjoy!</p>
                     <div class="icons">
-                        <img src="icons/bowling.svg" alt="bowling">
-                        <img src="icons/climbing.svg" alt="rock climbing">
-                        <img src="icons/gym.svg" alt="fitness center">
+                        <figure>
+                            <img src="icons/bowling.svg" alt="bowling">
+                            <figcaption>Bowling</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="icons/climbing.svg" alt="rock climbing">
+                            <figcaption>Rock Climbing</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="icons/gym.svg" alt="fitness center">
+                            <figcaption>Fitness Center</figcaption>
+                        </figure>
+                        <figure>
                         <img src="icons/basketball.svg" alt="indoor court">
+                        <figcaption>Indoor Court</figcaption>
                     </div>
                     <button>Get Started</button>
                 </div>
                 <div class="banner-image" id="banner-image">
-                    <img src="images/discover.svg" alt="">
+                    <img src="images/discover.svg" alt="girl studying">
                 </div>
                 <div class="scroll-button" id="scroll-button">
-
+                    <button type="button"></button>
                 </div>
             </div>
             <div class="main-text">
                 <div class="discover-algonquin">
-                    <img src="images/school.jpg" alt="group of students">
+                    <picture>
+                        <source srcset="images/school-375_x_249.jpg 375w,
+                        images/school-768_x_510.jpg 768w,
+                        images/school-813_x_510.jpg 810w"
+                        media="(max-width: 810px)">
+                        <img src="images/school.jpg" alt="group of students">
+                    </picture>
                     <div class="content">
                         <h2>Discover.</h2>
                         <h3>Algonquin College</h3>
@@ -59,25 +76,25 @@
                 <div class="bio">
                     <div class="bio-content">
                         <img src="images/simon.jpg" alt="Dijanelle Simon">
-                        <h4>Dijanelle Simon SA President</h4>
+                        <h3>Dijanelle Simon SA President</h4>
                         <p>"Only with increased capacity can we expand and create a more inclusive program that attracts a greater number of students to participate in physical and social activity. The Students' Association is committed to and focused on programming that results in our students taking person ownership for their health."
                         </p>
                     </div>
                 </div>
                 <div class="discover-entertainment">
+                    <img src="images/entertainment.jpg">
                     <div class="entertainment-content">
                         <h2>Discover.</h2>
                         <h3>The entertainment</h3>
                         <p>at Algonquin College is endless. We currently have the Algonquin Commons Theatre where we host a variety of events. Now with the coming of the ARC facility, not only will it be providing more space for the students to study, but it will also be bringing in more room for late-night entertainment.</p>
                         <button>Learn More</button>
                     </div>
-                    <img src="images/entertainment.jpg">
                 </div>
             </div>
         </main>
         <footer>
-            <p>Follow us</p>
             <div class="social">
+                <p>Follow us</p>
                 <img src="icons/facebook.svg" alt="facebook">
                 <img src="icons/instagram.svg" alt="instagram">
                 <img src="icons/twitter.svg" alt="twitter">
@@ -85,6 +102,7 @@
             </div>
             <div class="top-button">
                 <img src="icons/arrow.svg" alt="arrow" a href="#">
+                <p>back to top</p>
             </div>
         </footer>
     </body>
