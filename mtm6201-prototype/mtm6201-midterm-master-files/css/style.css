@@ -128,6 +128,11 @@ header nav ul li a.active {
     justify-items: center;
 }
 
+.icons figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .icons figure img {
     width: 50px;
     height: auto;
@@ -144,7 +149,7 @@ header nav ul li a.active {
     font-size: 2rem;
     font-weight: 800;
     padding: 0.5rem 3rem 0.5rem 3rem;
-    margin: 1rem;
+    margin: 1rem auto;
     border-radius: 30px;
     box-shadow: 0px 8px 10px rgb(177, 177, 177);
     border: none;
@@ -152,8 +157,15 @@ header nav ul li a.active {
 
 /*sizing the girl studying svg*/
 .banner-image img {
-    width: 85vw;
+    width: 80vw;
     height: auto;
+}
+.home-banner, .content, .bio-content, .entertainment-content {
+    margin: 1.5rem 1.5rem auto;
+}
+
+.scroll-button {
+    display: none;
 }
 /*styling the discover algonquin section on index for mobile*/
 .main-text .content h2 {
@@ -166,6 +178,9 @@ header nav ul li a.active {
 }
 
 .main-text .content button {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
     background-color: #26a682;
     color: #f2f2f2;
     font-size: 1.5rem;
@@ -182,17 +197,20 @@ header nav ul li a.active {
 .bio {
     background-color: #3c3b3a;
     color: #f2f2f2;
+    padding-top: 1.5rem;
 }
 
-.bio-content img {
-    max-width: 50vw;
+.bio img {
+    max-width: 200px;
     height: auto;
     clip-path: circle(50% at center);
     border: 5px white;
+    margin: auto;
 }
 
 .bio-content h3 {
     font-weight: bolder;
+    text-align: center;
 }
 
 /* styling the home page discover entertainment section */
@@ -222,29 +240,35 @@ footer {
     background-color: #3c3b3a;
     color: #f2f2f2;
     display: grid;
-    grid-template-columns: repeat(7 1fr);
-    grid-template-rows: repeat(4 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
 }
 
 footer p {
-    grid-column: 3 / 5;
+    grid-column: 2 / 3;
     grid-row: 2 / 3;
+    display: flex;
     justify-content: center;
 }
 
 .social {
     display: flex;
     flex-direction: row;
-    grid-column: 2 / 6;
+    justify-content: space-evenly;
+    grid-column: 2 / 3;
     grid-row: 3 / 4;
 
 }
 
 .top-button {
-    position: relative;
-    right: 0;
-    grid-column: 5 / 7;
-    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: center;
+}
+.top-button img {
+    align-self: center;
 }
 .social img {
     max-width: 27px;
@@ -271,4 +295,21 @@ footer p {
     position: relative;
     left: 30%;
     bottom: 10%;
+}
+
+.sponsors img {
+    margin: auto;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* styling the contact page for mobile */
+.contact-form {
+    background-color: #26a682;
+    border-radius: 15px;
+}
+.contact-form h2 {
+    color: #f2f2f2;
 }
