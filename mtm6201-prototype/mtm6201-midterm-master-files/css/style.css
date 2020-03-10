@@ -3,9 +3,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* *,*::after,*::before {
+*,*::after,*::before {
 	box-sizing: border-box;
-} */
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -53,7 +53,7 @@ table {
 /* css reset ends, begins setting up basic styling for h1s etc*/
 body {
     font-family: 'raleway', Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     line-height: 2.2rem;
 }
 img {
@@ -79,9 +79,6 @@ h4 {
     font-size: 1.25rem;
 }
 
-main {
-    margin: 2rem 2rem auto;
-}
 /* styling the nav for mobile */
 header {
     background-color: #3c3b3a;
@@ -124,7 +121,7 @@ header nav ul li a.active {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     justify-items: center;
 }
 
@@ -148,11 +145,16 @@ header nav ul li a.active {
     color: #f2f2f2;
     font-size: 2rem;
     font-weight: 800;
-    padding: 0.5rem 3rem 0.5rem 3rem;
+    padding: 0.5rem 4rem 0.5rem 4rem;
     margin: 1rem auto;
+    margin-bottom: 2rem;
     border-radius: 30px;
     box-shadow: 0px 8px 10px rgb(177, 177, 177);
     border: none;
+}
+.get-started-button {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 /*sizing the girl studying svg*/
@@ -176,8 +178,11 @@ header nav ul li a.active {
 .main-text .content h3 {
     color: #26a682;
 }
-
-.main-text .content button {
+.discover-button {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.discover-button button {
     display: flex;
     flex-direction: row;
     align-self: flex-end;
@@ -203,12 +208,12 @@ header nav ul li a.active {
 .bio img {
     max-width: 200px;
     height: auto;
-    clip-path: circle(50% at center);
-    border: 5px white;
+    border-radius: 100%;
+    border: 5px solid white;
     margin: auto;
 }
 
-.bio-content h3 {
+.bio h3 {
     font-weight: bolder;
     text-align: center;
 }
@@ -223,13 +228,19 @@ header nav ul li a.active {
     color: #26a682; 
 }
 
-.entertainment-content button {
+.entertainment-button {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.entertainment-button button {
     background-color: #26a682;
     color: #f2f2f2;
     font-size: 1.5rem;
     font-weight: 550;
     padding: 0.7rem 2rem 0.7rem 2rem;
     margin: 1rem;
+    margin-bottom: 2rem;
     border-radius: 30px;
     box-shadow: 0px 8px 10px rgb(177, 177, 177);
     border: none;
@@ -261,14 +272,24 @@ footer p {
 }
 
 .top-button {
+    font-size: 0.65rem;
     grid-column: 3 / 4;
     grid-row: 2 / 4;
     display: flex;
     flex-direction: row-reverse;
-    align-self: center;
 }
 .top-button img {
+    display: flex;
     align-self: center;
+}
+
+.top-button a {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    /* max-width: 100px; */
+    height: auto;
+    text-decoration: none;
 }
 .social img {
     max-width: 27px;
@@ -281,35 +302,342 @@ footer p {
 }
 
 /* styling the about page for mobile */
+.about-intro, .about-main, .sponsors {
+    margin: 1.5rem 1.5rem auto;
+}
+
 .about-intro img {
     max-width: 90vw;
 }
-
-.about-banner figure picture img {
-    position: absolute;
+/* setting up the about banner and services banner as a background images so that the text can easily float in the center with flexbox */
+.about-banner {
+    min-height: 200px;
+    width: auto;
+    background-image: url(../images/about-375_x_200.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.about-banner figcaption {
-    font-size: 3rem;
+.about-banner h1 {
+    color: #f2f2f2;
+}
+
+.about-main h2 {
     font-weight: bold;
-    position: relative;
-    left: 30%;
-    bottom: 10%;
+    font-style: italic;
+}
+
+.services-banner {
+    min-height: 200px;
+    width: auto;
+    background-image: url(../images/services-375_x_200.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-banner h1 {
+    color: #f2f2f2;
+}
+/* setting the restaurant picture to not display at mobile */
+.restaurant picture {
+    display: none;
+}
+
+.restaurant {
+    padding: 1rem;
+    padding-bottom: 1rem;
+    background-color: #ffffff;
+}
+
+.restaurant h2, .bowling h2 {
+    font-weight: bold;
+    margin: 0.75rem 0 0.75rem 0;
+}
+
+.restaurant h3, .bowling h3 {
+    color: #26a682;
+}
+
+.bowling {
+    background-color: #f2f2f2;
+    padding: 1rem;
+}
+
+.bowling picture {
+    display: none;
+}
+
+/* styling the subscribe section for mobile */
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3c3b3a;
+    color: #f2f2f2;
+}
+
+.subscribe-button button {
+    background-color: #26a682;
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    font-weight: 550;
+    padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 30px;
+    border: none;
+}
+/* styling the fitness and rock-climbing sections for mobile */
+.fitness, .rock-climbing {
+    padding: 1rem;
+}
+
+.fitness picture {
+    display: none;
+}
+
+.fitness .wrapper h2 {
+    font-weight: bold;
+}
+
+.fitness .wrapper h3 {
+    color: #26a682;
+}
+
+.rock-climbing {
+    background-color: #f2f2f2;
+}
+
+.rock-climbing picture {
+    display: none;
+}
+
+.rock-climbing h2 {
+    font-weight: bold;
+}
+
+.rock-climbing h3 {
+    color: #26a682;
+}
+
+.sponsors {
+    text-align: center;
+}
+
+.sponsors h1 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    line-height: 4rem
 }
 
 .sponsors img {
     margin: auto;
     max-width: 200px;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
+
 /* styling the contact page for mobile */
+main {
+    margin: 1.5rem 1.5rem auto;
+}
+
 .contact-form {
     background-color: #26a682;
     border-radius: 15px;
+    box-shadow: 4px 4px 5px #77777780;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
+
 .contact-form h2 {
     color: #f2f2f2;
+    font-weight: bold;
 }
+
+.contact-form label {
+    color: #f2f2f2;
+}
+
+.contact-form button {
+    background-color: #3c3b3a;
+    color: #f2f2f2;
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding: 0.3rem 2rem 0.3rem 2rem;
+    margin: 1rem auto;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+    box-shadow: 0px 2px 8px rgb(0, 0, 0);
+    border: none;
+    width: 100%;
+}
+
+form fieldset input {
+    width: 100%;
+    border-radius: 30px;
+    padding: 0.5rem;
+    border: none;
+}
+
+form fieldset input#message {
+    padding-bottom: 5rem;
+    border-radius: 10px;
+}
+
+.contact-location h2 {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.contact-map iframe {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* first media query for tablet view */
+@media(min-width: 700px) {
+    /* styling the nav for tablet */
+    header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 2em;
+    }
+
+    header nav ul li {
+        margin-left: 1em;
+    }
+
+    
+
+    /* styling the home page for tablet */
+
+    .icons {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .scroll-button {
+        display: contents;
+    }
+
+    .scroll-button a {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .scroll-button img {
+        width: 26px;
+        transform: rotate(180deg);
+    }
+
+    .bio {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .banner-image img {
+        width: 50vw;
+        height: auto;
+        margin: auto;
+    }
+
+    .home-banner, .content, .bio-content, .entertainment-content {
+        margin: 2.5rem 2.5rem auto;
+    }
+    /* about page for tablet */
+    .about-intro, .about-main, .sponsors {
+        margin: 2.5rem 2.5rem auto;
+    }
+
+    .about-intro img {
+        max-width: 70vw;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .about-banner {
+        background-image: url(../images/about-768_x_200.jpg);
+    }
+
+    .services-text picture {
+        display: block;
+    }
+
+    .services-text picture img {
+        max-width: 218px;
+    }
+
+    .restaurant {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .bowling {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .bowling picture {
+        grid-row: 1 / 2;
+    }
+
+
+    .fitness picture, .rock-climbing picture {
+       display: block;
+       max-width: 218px;
+    }
+
+    .fitness {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fitness picture {
+        grid-column: 1 / 2;
+    }
+
+    .fitness .wrapper {
+        grid-column: 2 / 4;
+    }
+
+
+/* contact page styling for tablet */
+    main {
+        margin: 2.5rem 2.5rem auto;
+    }
+
+    .contact-intro img {
+        max-width: 452px;
+        margin: auto;
+    }
+
+    .submit-button {
+        width: 210px;
+    }
+}   
+    .contact-map iframe {
+        height: 500px;
+    }
+
+    #form-contact {
+        display: grid;
+
+    }
+/* media query for desktop view */

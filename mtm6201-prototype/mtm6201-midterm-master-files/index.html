@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <a id="top"></a>
         <header>
             <div class="logo" id="logo">
                 <img src="images/logo.svg" alt="arc logo">
@@ -47,35 +48,43 @@
                     <img src="icons/basketball.svg" alt="indoor court">
                     <figcaption>Indoor Court</figcaption>
                 </div>
-                <button>Get Started</button>
+                <div class="get-started-button">
+                    <button>Get Started</button>
+                </div>
             </div>
             <div class="banner-image" id="banner-image">
                 <img src="images/discover.svg" alt="girl studying">
             </div>
             <div class="scroll-button" id="scroll-button">
-                <button type="button"></button>
+                <a href="#scroll"><img src="icons/arrow.svg" alt="scroll arrow">scroll</a>
             </div>
         </div>
         <div class="main-text">
             <div class="discover-algonquin">
                 <picture>
-                    <source srcset="images/school-375_x_200.jpg 375w,
-                    images/school-768_x_200.jpg 768w,
-                    images/school-813_x_337.jpg 813w"
-                    media="(max-width: 810px)">
+                    <source srcset="images/school-813_x_337.jpg 1080w"
+                    media="(min-width: 1080px)">
+                    <source srcset="images/school-768_x_200.jpg 768w"
+                    media="(min-width: 720px)">
+                    <source srcset="images/school-375_x_200.jpg 375w"
+                    media="(max-width: 720px)">
                     <img src="images/school.jpg" alt="group of students">
                 </picture>
                 <div class="content">
                     <h2>Discover.</h2>
                     <h3>Algonquin College</h3>
                     <p>of Applied Arts and Technology is a publicly funded English-language college located in Ottawa, Ontario, Canada. The college serves the National Capital Region and the outlying areas of Eastern Ontario, Western Quebec, and Upstate New York.</p>
-                    <button>Learn More</button>
+                    <div class="discover-button">
+                        <button>Learn More</button>
+                    </div>
                 </div>
             </div>
-            <div class="bio">
-                <img src="images/simon.jpg" alt="Dijanelle Simon">
+            <div class="bio" id="scroll">
+                <div class="bio-image">
+                    <img src="images/simon.jpg" alt="Dijanelle Simon">
+                    <h3>Dijanelle Simon SA President</h3>
+                </div>
                 <div class="bio-content">
-                    <h3>Dijanelle Simon SA President</h4>
                     <p>"Only with increased capacity can we expand and create a more inclusive program that attracts a greater number of students to participate in physical and social activity. The Students' Association is committed to and focused on programming that results in our students taking person ownership for their health."
                     </p>
                 </div>
@@ -85,14 +94,16 @@
                     <source srcset="images/entertainment-375_x_200.jpg 375w,
                     images/entertainment-768_x_200.jpg 768w,
                     images/entertainment-813_x_337.jpg 1280w"
-                    media="(max-width: 1280px)">
+                    media="(min-width: 720px)">
                     <img src="images/entertainment.jpg">
                 </picture>
                 <div class="entertainment-content">
                     <h2>Discover.</h2>
                     <h3>The entertainment</h3>
                     <p>at Algonquin College is endless. We currently have the Algonquin Commons Theatre where we host a variety of events. Now with the coming of the ARC facility, not only will it be providing more space for the students to study, but it will also be bringing in more room for late-night entertainment.</p>
-                    <button>Learn More</button>
+                    <div class="entertainment-button">
+                        <button>Learn More</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,10 +116,7 @@
                 <img src="icons/youtube.svg" alt="youtube">
             </div>
             <div class="top-button">
-                <figure>
-                    <img src="icons/arrow.svg" alt="arrow" a href="#">
-                    <figcaption>back to top</figcaption>
-                </figure>
+                <a href="#top"><img src="icons/arrow.svg" alt="back to top arrow">back to top</a>
             </div>
         </footer>
     </body>
