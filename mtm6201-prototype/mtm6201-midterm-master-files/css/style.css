@@ -189,7 +189,7 @@ header nav ul li a.active {
     background-color: #26a682;
     color: #f2f2f2;
     font-size: 1.5rem;
-    font-weight: 550;
+    font-weight: 600;
     padding: 0.7rem 2rem 0.7rem 2rem;
     margin: 1rem;
     border-radius: 30px;
@@ -237,7 +237,7 @@ header nav ul li a.active {
     background-color: #26a682;
     color: #f2f2f2;
     font-size: 1.5rem;
-    font-weight: 550;
+    font-weight: 600;
     padding: 0.7rem 2rem 0.7rem 2rem;
     margin: 1rem;
     margin-bottom: 2rem;
@@ -391,7 +391,7 @@ footer p {
     background-color: #26a682;
     color: #f2f2f2;
     font-size: 1.5rem;
-    font-weight: 550;
+    font-weight: 600;
     padding: 0.3rem 1.5rem 0.3rem 1.5rem;
     margin: 1rem;
     margin-bottom: 2rem;
@@ -831,7 +831,72 @@ form fieldset input#message {
         margin-bottom: 3rem;
     }
 
-    /* styling the about page for mobile */
+    /* styling the about page for desktop */
+    .about-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
+    }
+    /* finished the about intro */
+    .about-banner {
+        background-image: url(../images/about-1920_x_200.jpg);
+    }
 
-    
+    .about-main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        margin: 8rem 4rem 8rem 4rem;
+    }
+
+    .who {
+        grid-column: 1 / 2;
+    }
+
+    .what {
+        grid-column: 2 / 3;
+    }
+
+    .where {
+        grid-column: 3 / 4;
+    }
+    /* finished the about who what where */
+
+    .services-banner {
+        background-image: url(../images/services-1920_x_200.jpg);
+    }
+
+    .restaurant {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bowling {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fitness {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rock-climbing {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* styling the sponsors section for desktop */
+    .sponsors {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .sponsors h1 {
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .sponsors img {
+        flex-direction: row;
+    }
+
+
 }
