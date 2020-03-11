@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -16,8 +16,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -28,7 +28,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -59,7 +59,7 @@ body {
 img {
     width: 100%;
     display: block;
-}   
+}
 
 h1 {
     font-size: 3rem;
@@ -225,7 +225,7 @@ header nav ul li a.active {
 }
 
 .entertainment-content h3 {
-    color: #26a682; 
+    color: #26a682;
 }
 
 .entertainment-button {
@@ -261,7 +261,7 @@ footer p {
     display: flex;
     justify-content: center;
 }
-
+/* styling the social buttons, setting their positions in the footer */
 .social {
     display: flex;
     flex-direction: row;
@@ -270,13 +270,14 @@ footer p {
     grid-row: 3 / 4;
 
 }
-
+/* styling the back to top button */
 .top-button {
     font-size: 0.65rem;
     grid-column: 3 / 4;
     grid-row: 2 / 4;
     display: flex;
     flex-direction: row-reverse;
+    margin-right: 1rem;
 }
 .top-button img {
     display: flex;
@@ -287,9 +288,15 @@ footer p {
     display: flex;
     flex-direction: column;
     align-self: center;
-    /* max-width: 100px; */
     height: auto;
     text-decoration: none;
+}
+
+.top-button a:link,
+.top-button a:visited,
+.top-button a:hover,
+.top-button a:active {
+    color: #f2f2f2;
 }
 .social img {
     max-width: 27px;
@@ -504,28 +511,39 @@ form fieldset input#message {
 }
 
 /* first media query for tablet view */
-@media(min-width: 700px) {
+@media(min-width: 768px) {
     /* styling the nav for tablet */
     header {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
-    
+
     header nav ul {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        margin-right: 2em;
+        margin-right: 4rem;
     }
 
     header nav ul li {
-        margin-left: 1em;
+        margin-left: 1rem;
     }
 
-    
+    .logo {
+        margin-left: 4rem;
+    }
 
     /* styling the home page for tablet */
+    .banner-text h1 {
+        font-size: 4rem;
+        margin: 3rem 0 1.5rem 0;
+    }
+
+    .banner-text p {
+        margin-bottom: 1.5rem;
+    }
+
 
     .icons {
         grid-template-columns: repeat(4, 1fr);
@@ -533,13 +551,20 @@ form fieldset input#message {
     }
 
     .scroll-button {
-        display: contents;
+        display: block;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2.5rem;
     }
 
     .scroll-button a {
         display: flex;
         flex-direction: column;
-        margin: auto;
+        align-items: center;
+        text-decoration: none;
+        color: #3c3b3a;
     }
 
     .scroll-button img {
@@ -549,7 +574,16 @@ form fieldset input#message {
 
     .bio {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    .bio-description {
+        grid-column: 1 / 2;
+    }
+
+    .bio-content {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
     }
 
     .banner-image img {
@@ -566,16 +600,37 @@ form fieldset input#message {
         margin: 2.5rem 2.5rem auto;
     }
 
+    .about-intro h1 {
+        font-size: 4rem;
+        margin: 3rem 0 1.5rem 0;
+        line-height: 5rem;
+        padding-right: 2rem;
+    }
+
     .about-intro img {
         max-width: 70vw;
         margin: auto;
         margin-bottom: 1rem;
+        margin-top: 1.5rem;
     }
-    
+    /* changing the banner image for sizing */
     .about-banner {
         background-image: url(../images/about-768_x_200.jpg);
     }
 
+    .about-main h2 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .about-main {
+        margin-bottom: 1.5rem;
+    }
+    /* styling the services section for tablet, moving the images and text etc. */
+    .services-banner {
+        background-image: url(../images/services-768_x_200.jpg);
+    }
+    
     .services-text picture {
         display: block;
     }
@@ -585,6 +640,7 @@ form fieldset input#message {
     }
 
     .restaurant {
+        padding: 3rem;
         display: grid;
         grid-template-columns: 1fr 2fr;
     }
@@ -592,11 +648,31 @@ form fieldset input#message {
     .bowling {
         display: grid;
         grid-template-columns: 2fr 1fr;
+        padding: 3rem;
     }
 
     .bowling picture {
         grid-row: 1 / 2;
+        grid-column: 2 / 3;
     }
+    /* styling the subscribe button for tablet */
+    .subscribe {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .subscribe p {
+        font-size: 1.3rem;
+        margin-left: 2rem;
+    }
+
+    .subscribe-button button {
+        margin: 0.75rem;
+        margin-left: 9rem;
+    }
+
+    /* finished styling the subscribe for tablet */
 
 
     .fitness picture, .rock-climbing picture {
@@ -607,6 +683,7 @@ form fieldset input#message {
     .fitness {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        padding: 3rem;
     }
 
     .fitness picture {
@@ -617,21 +694,54 @@ form fieldset input#message {
         grid-column: 2 / 4;
     }
 
+    .rock-climbing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 3rem;
+    }
+
+    .rock-climbing picture {
+        grid-column: 3 / 4;
+    }
+
+    .rock-climbing-wrapper {
+        grid-column: 1 / 3;
+    }
 
 /* contact page styling for tablet */
     main {
         margin: 2.5rem 2.5rem auto;
+    }
+    /* styling the contact intro section for tablet */
+    .contact-intro h1 {
+        line-height: 5rem;
+        font-size: 4rem;
+        margin: 3rem 0 1.5rem 0;
+    }
+
+    .contact-intro p {
+        margin-bottom: 0.5rem;
     }
 
     .contact-intro img {
         max-width: 452px;
         margin: auto;
     }
+    /* styling the contact form for tablet */
+
+    .contact-form form {
+        padding: 1.2rem;
+    }
+
+    .contact-form h2 {
+        font-size: 2.75rem;
+        margin-bottom: 1rem;
+    }
 
     .submit-button {
         width: 210px;
     }
-}   
+
     .contact-map iframe {
         height: 500px;
     }
@@ -640,4 +750,88 @@ form fieldset input#message {
         display: grid;
 
     }
+}
 /* media query for desktop view */
+
+@media(min-width: 1080px) {
+    /* styling the home page for desktop */
+    .home-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .banner-text {
+        grid-column: 1 / 2;
+        padding-right: 3rem;
+    }
+
+    .banner-text p {
+        margin: 5rem 0 5rem 0;
+    }
+
+    .banner-image {
+        grid-column: 2 / 3;
+    }
+    /* break */
+
+    .discover-algonquin {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .discover-algonquin picture {
+        grid-column: 1 / 2;
+        max-width: 813px;
+    }
+
+    .discover-algonquin .content {
+        grid-column: 2 / 3;
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+
+    /* styling bio content for desktop */
+
+    .bio {
+        grid-template-columns: 1fr 1fr 3fr;
+        padding-bottom: 1.5rem;
+    }
+
+    .bio-image {
+        grid-column: 1 / 2;
+        align-self: center;
+    } 
+
+    .bio-description {
+        grid-column: 2 / 3;
+        align-self: center;
+    }
+
+    .bio-content {
+        grid-column: 3 / 4;
+        align-self: center;
+    }
+
+    /* break */
+
+    .discover-entertainment {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .discover-entertainment picture {
+        grid-column: 2 / 3;
+        max-width: 813px;
+    }
+
+    .entertainment-content {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+
+    /* styling the about page for mobile */
+
+    
+}
