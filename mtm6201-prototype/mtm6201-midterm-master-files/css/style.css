@@ -500,6 +500,10 @@ form fieldset input#message {
     border-radius: 10px;
 }
 
+.contact-location {
+    margin-left: 2.5rem;
+}
+
 .contact-location h2 {
     font-weight: bold;
     margin-bottom: 0.75rem;
@@ -508,6 +512,41 @@ form fieldset input#message {
 .contact-map iframe {
     width: 100%;
     margin-top: 2rem;
+}
+/* The animations */
+
+button:hover {
+    animation-name: buttonbounce;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes buttonbounce {
+    0% {
+        transform: translateY(10px);
+        color: #f2f2f2;
+    }
+
+    25% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        color: black;
+        background-color: #31ecb7;
+    }
 }
 
 /* first media query for tablet view */
@@ -739,6 +778,13 @@ form fieldset input#message {
     }
 
     .submit-button {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-items: flex-end;
+    }
+
+    .submit-button button {
         width: 210px;
     }
 
@@ -898,5 +944,24 @@ form fieldset input#message {
         flex-direction: row;
     }
 
+    /* styling the contact page for desktop */
+
+    main {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .location-and-map {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-map {
+        margin: 2.5rem;
+    }
+
+    .contact-map iframe {
+        max-width: 812px;
+    }
 
 }
