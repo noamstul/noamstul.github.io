@@ -265,10 +265,13 @@ footer p {
 .social {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+}
 
+.social img {
+    margin: 0 0.5rem 0 0.5rem;
 }
 /* styling the back to top button */
 .top-button {
@@ -457,6 +460,8 @@ main {
     margin: 1.5rem 1.5rem auto;
 }
 
+/* styling the contact form */
+
 .contact-form {
     background-color: #26a682;
     border-radius: 15px;
@@ -501,6 +506,8 @@ form fieldset input#message {
     border-radius: 10px;
 }
 
+/* styling the contact location section */
+
 .contact-location {
     margin-left: 2.5rem;
 }
@@ -514,7 +521,7 @@ form fieldset input#message {
     width: 100%;
     margin-top: 2rem;
 }
-/* The animations */
+/* The animations for ALL breakpoints */
 
 button:hover {
     animation-name: buttonbounce;
@@ -641,6 +648,8 @@ button:hover {
         transform: rotate(180deg);
     }
 
+    /* end of home banner, icons and scroll button */
+
     .bio {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -655,6 +664,8 @@ button:hover {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
+
+    /* end of bio section for tablet */
 
     .banner-image img {
         width: 50vw;
@@ -696,7 +707,7 @@ button:hover {
     .about-main {
         margin-bottom: 1.5rem;
     }
-    /* styling the services section for tablet, moving the images and text etc. */
+    /* styling the services section for tablet, moving the images and text etc. and setting up grids for the bowling, restau etc. */
     .services-banner {
         background-image: url(../images/services-768_x_200.jpg);
     }
@@ -745,7 +756,6 @@ button:hover {
     }
 
     /* finished styling the subscribe for tablet */
-
 
     .fitness picture, .rock-climbing picture {
        display: block;
@@ -827,6 +837,7 @@ button:hover {
         width: 210px;
         grid-column: 3 / 4;
     }
+    /* styling the contact location and map section for tablet */
 
     .contact-location h2 {
         font-size: 3.5rem;
@@ -845,6 +856,10 @@ button:hover {
 
 @media(min-width: 1080px) {
     /* styling the home page for desktop */
+    
+    .home-banner, .content, .bio-content, .entertainment-content {
+        margin: 4rem 4rem;
+    }
     .home-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -862,7 +877,7 @@ button:hover {
     .banner-image {
         grid-column: 2 / 3;
     }
-    /* break */
+    /* discover algonquin and entertainment sections for desktop */
 
     .discover-algonquin {
         margin-left: 2rem;
@@ -965,7 +980,7 @@ button:hover {
     .services-banner {
         background-image: url(../images/services-1920_x_200.jpg);
     }
-
+    /* this is the main bulk of the about page for desktop */
     .restaurant {
         grid-template-columns: 1fr 1fr;
     }
@@ -1058,12 +1073,12 @@ button:hover {
         grid-template-columns: 1fr 1fr;
     }
 
-    .contact-map iframe {
-        margin: 4rem 0rem 2.5rem 4rem;
+    .contact-map {
+        padding-right: 4rem;
     }
 
     .contact-map iframe {
+        margin: 4rem 0rem 2.5rem 0rem;
         max-width: 812px;
     }
-
 }
