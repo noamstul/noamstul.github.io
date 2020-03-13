@@ -111,6 +111,10 @@ header nav ul li a:active {
     text-decoration: none;
 }
 
+header nav ul li a:hover {
+    color: #26a682;
+}
+
 header nav ul li a.active {
     font-weight: bold;
     font-size: 1.1rem;
