@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- navbar starts -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-secondary fluid-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fluid-top">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
             <!-- adding an icon for the toggler button -->
             <span class="navbar-toggler-icon">
@@ -21,8 +21,8 @@
         </button>
       <div id="mynav" class="collapse navbar-collapse">
         <div class="navbar-nav ml-auto">
-          <a href="#" class="nav-link">Getting Started</a>
-          <a href="#" class="nav-link">Components</a>
+          <a href="#get-started" class="nav-link">Getting Started</a>
+          <a href="#components" class="nav-link">Components</a>
           <a href="#" class="nav-link">Layout</a>
         </div>
       </div>
@@ -31,7 +31,7 @@
     <!-- main container for all content -->
     <div class="container-fluid bg-light">
       <div class="container-md bg-light">
-        <h1 class="display-2 text-dark">The Joys of Bootstrap</h1>
+        <h1 class="display-2 text-dark pt-5 pb-3">The Joys of Bootstrap</h1>
         <h4 class="row p-3 text-dark">
             Bootstrap is awesome! It’s an open-source web development toolkit that allows you to take all the fuss out of developing websites and apps. Say goodbye to CSS and Javascipt, and enjoy all the handy pre-built components that Bootstrap has to offer. From navigation bars, to helpful layout tools, and even cards and built in colours, Bootstrap has it all. 
         </h4>
@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="container-md pt-3 bg-light">
-        <h1 class="display-4">Getting started</h1>
+        <h1 class="display-4 pb-3" id="get-started">Getting started</h1>
         <p class="text-dark">
           Are you ready for all the greatness that bootstrap has to offer? Getting your first bootstrap site started is just as easy as you think. All you have to do it go to getbootstrap.com, and you’ll find a few easy ways to get your html document bootstrapped and ready to go. The easiest way, in my opinion, is to copy the starter template down below.
         </p>
@@ -92,15 +92,71 @@
           </div>
         </div>
       </div>
-      <div class="container-md pt-3 bg-light">
-        <h1 class="display-4">Components</h1>
-        <h5 class="text-dark">
-          Okay, this is where the real fun starts! Here we are going to take a look at a few different types of components that Bootstrap has to offer. Let's start with Cards.
-        </h5>
-        <h3 class="text-dark pt-3">Cards</h3>
-        <p class="text-dark">Okay so what exactly are we talking about with cards? Cards can be used in many different ways, but if you want an easy example, take a look at our topics up at the top of the page. See how nicely contained each box is? well you can do that and more with the card component.</p>
-        <div class="row mt-5 mb-5">
-          
+      <div class="container-fluid bg-light"> 
+        <div class="container-md pt-3 bg-light">
+          <h1 class="display-4 mb-4" id="components">Components</h1>
+          <h5 class="text-dark mb-5">
+            Okay, this is where the real fun starts! Here we are going to take a look at a few different types of components that Bootstrap has to offer. Let's start with Cards.
+          </h5>
+          <h3 class="text-dark pt-3">Cards</h3>
+          <p class="text-dark">Okay so what exactly are we talking about with cards? Cards can be used in many different ways, but if you want an easy example, take a look at our topics up at the top of the page. See how nicely contained each box is? well you can do that and more with the card component.</p>
+          <p class="text-dark">There are many different ways you can make a card with Bootstrap, but the thing you need to know is that they mainly consist of three parts: the card header, card body, and card footer. Any of these is optional, but you'll probably want to at least have a card body, and most of the time a card head.</p>
+          <div class="row mt-5 mb-5">
+            <div class="col-lg-4">
+              <div class="card text-white bg-info pb-5">
+                <div class="card-header font-weight-bold">Solid Card</div>
+                <div class="card-body">
+                  <h5 class="card-title">Here's the title</h5>
+                  <p class="card-text">Throw your card text right here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <img src="https://via.placeholder.com/500x100" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card with image on the top</h5>
+                  <p class="card-text">You can have a card with an image or thumbnail on top. This is great for teasing an article, recipe, or product.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card border-warning">
+                <div class="card-header bg-transparent border-warning font-weight-bold">Transparent Card</div>
+                <div class="card-body text-warning">
+                  <h5 class="card-title">Your Card Title</h5>
+                  <p class="card-text">This is where your text goes in your card.</p>
+                </div>
+                <div class="card-footer bg-transparent border-warning">
+                  Throw your footer here.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-md-pt-3">
+            <h3 class="text-dark">Forms</h3>
+            <p>Here's something that you'll inevitably have to do in any intro to responsive web design course: Forms! Whether you're designing a site for yourself or a client, you'll find that you will eventually need to create a form. It can be a real pain to deal with the CSS of it all, targeting the right fieldsets and whatnot. Here's an idea: let's use the Bootstrap form component to save us the trouble.</p>
+            <p>Bootstrap forms are very similar to traditional HTML forms, but they take the fuss out of it. You simply need form groups inside your form, and you're off to the races. Try out my simple form below.</p>
+            <div class="container-lg rounded bg-info p-4 mb-3">
+              <form class="text-light">
+                <div class="form-group">
+                  <label for="fullname">Full Name</label>
+                  <input type="text" class="form-control" id="fullname" aria-describedby="nameHelp">
+                </div>
+                <div class="form-group">
+                  <label for="inputemail">Email Address</label>
+                  <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp">
+                </div>
+                <button type="submit" class="btn btn-light">Submit</button>
+              </form>
+            </div>
+            <h3 class="text-dark">Jumbotrons</h3>
+            <p>Okay, I'll admit it. This made it on the list simply because of it's awesome name. The Jumbotron is big for a reason; it is meant to prominently display the key information of your site. As such, it is perfect for something like a landing page.</p>
+            <p>In order to make a jumbotron for yourself, you just need a div with the class of jumbotron. Inside, you'll want some reaaaaally big information, so maybe use an h1 with a big display (in bootstrap, you can use the class of display-# to increase the size of a h# tag). After your huge info, maybe some smaller lines and a button or link for the user to follow. Let's look at one in action.</p>
+            <div class="jumbotron">
+              <h1 class="display-4">Jumbotrons are cool</h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>
