@@ -11,7 +11,8 @@
     <title>Bootstrap this</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-secondary fixed-top">
+    <!-- navbar starts -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-secondary fluid-top">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
             <!-- adding an icon for the toggler button -->
             <span class="navbar-toggler-icon">
@@ -20,22 +21,86 @@
         </button>
       <div id="mynav" class="collapse navbar-collapse">
         <div class="navbar-nav ml-auto">
-          <a href="#" class="nav-link">Green</a>
-          <a href="#" class="nav-link">Blue</a>
-          <a href="#" class="nav-link">Red</a>
+          <a href="#" class="nav-link">Getting Started</a>
+          <a href="#" class="nav-link">Components</a>
+          <a href="#" class="nav-link">Layout</a>
         </div>
       </div>
     </nav>
+    <!-- nav ends -->
+    <!-- main container for all content -->
     <div class="container-fluid bg-light">
       <div class="container-md bg-light">
-        <h1 class="pt-5 text-dark">The Joys of Bootstrap</h1>
-        <div class="row p-3 text-dark">
+        <h1 class="display-2 text-dark">The Joys of Bootstrap</h1>
+        <h4 class="row p-3 text-dark">
             Bootstrap is awesome! It’s an open-source web development toolkit that allows you to take all the fuss out of developing websites and apps. Say goodbye to CSS and Javascipt, and enjoy all the handy pre-built components that Bootstrap has to offer. From navigation bars, to helpful layout tools, and even cards and built in colours, Bootstrap has it all. 
+        </h4>
+        <div class="row mt-5 mb-5">
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Topic #1: Getting Started</h5>
+                <p class="card-text">We'll be using a step-by-step guide to show you how to get started with Bootstrap.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Topic #2: Components</h5>
+                <p class="card-text">We'll also take a look at some of the many components that Bootstrap has to offer. Check it out.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Topic #3: Layout</h5>
+                <p class="card-text">Lastly, we will explore the different layout tools that are built into the Bootstrap toolkit.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row mb-3">
-
+      <div class="container-md pt-3 bg-light">
+        <h1 class="display-4">Getting started</h1>
+        <p class="text-dark">
+          Are you ready for all the greatness that bootstrap has to offer? Getting your first bootstrap site started is just as easy as you think. All you have to do it go to getbootstrap.com, and you’ll find a few easy ways to get your html document bootstrapped and ready to go. The easiest way, in my opinion, is to copy the starter template down below.
+        </p>
+      </div>
+      <div class="container-md pt-3">
+        <div class="card">
+          <h5 class="card-header bg-dark text-light">Starter Instructions</div>
+          <div class="card-body">
+            <li class="list-group-item d-flex justify-content-left align-items-center">
+              <span class="badge badge-secondary badge-pill mr-3">1</span>
+              Head to getbootstrap.com and click "Get started"
+            </li>
+            <li class="list-group-item d-flex justify-content-left align-items-center">
+              <span class="badge badge-danger badge-pill mr-3">2</span>
+              Scroll down to "Starter template"
+            </li>
+            <li class="list-group-item d-flex justify-content-left align-items-center">
+              <span class="badge badge-warning badge-pill mr-3">3</span>
+              Copy the HTML in the grey window
+            </li>
+            <li class="list-group-item d-flex justify-content-left align-items-center">
+              <span class="badge badge-success badge-pill mr-3">4</span>
+              Paste it in your blank HTML document. You're ready to start!
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="container-md pt-3 bg-light">
+        <h1 class="display-4">Components</h1>
+        <h5 class="text-dark">
+          Okay, this is where the real fun starts! Here we are going to take a look at a few different types of components that Bootstrap has to offer. Let's start with Cards.
+        </h5>
+        <h3 class="text-dark pt-3">Cards</h3>
+        <p class="text-dark">Okay so what exactly are we talking about with cards? Cards can be used in many different ways, but if you want an easy example, take a look at our topics up at the top of the page. See how nicely contained each box is? well you can do that and more with the card component.</p>
+        <div class="row mt-5 mb-5">
+          
         </div>
       </div>
     </div>
