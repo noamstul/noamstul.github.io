@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- navbar starts -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fluid-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav">
             <!-- adding an icon for the toggler button -->
             <span class="navbar-toggler-icon">
@@ -23,7 +23,7 @@
         <div class="navbar-nav ml-auto">
           <a href="#get-started" class="nav-link">Getting Started</a>
           <a href="#components" class="nav-link">Components</a>
-          <a href="#" class="nav-link">Layout</a>
+          <a href="#layout" class="nav-link">Layout</a>
         </div>
       </div>
     </nav>
@@ -31,7 +31,7 @@
     <!-- main container for all content -->
     <div class="container-fluid bg-light">
       <div class="container-md bg-light">
-        <h1 class="display-2 text-dark pt-5 pb-3">The Joys of Bootstrap</h1>
+        <h1 class="display-2 text-dark pt-5 mt-5 pb-3">The Joys of Bootstrap</h1>
         <h4 class="row p-3 text-dark">
             Bootstrap is awesome! It’s an open-source web development toolkit that allows you to take all the fuss out of developing websites and apps. Say goodbye to CSS and Javascipt, and enjoy all the handy pre-built components that Bootstrap has to offer. From navigation bars, to helpful layout tools, and even cards and built in colours, Bootstrap has it all. 
         </h4>
@@ -65,45 +65,47 @@
       </div>
       <div class="container-md pt-3 bg-light">
         <h1 class="display-4 pb-3" id="get-started">Getting started</h1>
-        <p class="text-dark">
+        <h5 class="text-dark">
           Are you ready for all the greatness that bootstrap has to offer? Getting your first bootstrap site started is just as easy as you think. All you have to do it go to getbootstrap.com, and you’ll find a few easy ways to get your html document bootstrapped and ready to go. The easiest way, in my opinion, is to copy the starter template down below.
-        </p>
+        </h5>
       </div>
       <div class="container-md pt-3">
         <div class="card">
-          <h5 class="card-header bg-dark text-light">Starter Instructions</div>
-          <div class="card-body">
-            <li class="list-group-item d-flex justify-content-left align-items-center">
-              <span class="badge badge-secondary badge-pill mr-3">1</span>
-              Head to getbootstrap.com and click "Get started"
-            </li>
-            <li class="list-group-item d-flex justify-content-left align-items-center">
-              <span class="badge badge-danger badge-pill mr-3">2</span>
-              Scroll down to "Starter template"
-            </li>
-            <li class="list-group-item d-flex justify-content-left align-items-center">
-              <span class="badge badge-warning badge-pill mr-3">3</span>
-              Copy the HTML in the grey window
-            </li>
-            <li class="list-group-item d-flex justify-content-left align-items-center">
-              <span class="badge badge-success badge-pill mr-3">4</span>
-              Paste it in your blank HTML document. You're ready to start!
-            </li>
+          <h5 class="card-header bg-dark text-light">Starter Instructions</h5>
+          <div class="card-body bg-secondary">
+             <ul class="pl-0">
+              <li class="list-group-item d-flex justify-content-left align-items-center">
+                <span class="badge badge-secondary badge-pill mr-3">1</span>
+                Head to getbootstrap.com and click "Get started"
+              </li>
+              <li class="list-group-item d-flex justify-content-left align-items-center">
+                <span class="badge badge-danger badge-pill mr-3">2</span>
+                Scroll down to "Starter template"
+              </li>
+              <li class="list-group-item d-flex justify-content-left align-items-center">
+                <span class="badge badge-warning badge-pill mr-3">3</span>
+                Copy the HTML in the grey window
+              </li>
+              <li class="list-group-item d-flex justify-content-left align-items-center">
+                <span class="badge badge-success badge-pill mr-3">4</span>
+                Paste it in your blank HTML document. You're ready to start!
+              </li>
+            </ul>
           </div>
         </div>
       </div>
       <div class="container-fluid bg-light"> 
         <div class="container-md pt-3 bg-light">
-          <h1 class="display-4 mb-4" id="components">Components</h1>
+          <h1 class="display-4 mb-4 mt-4" id="components">Components</h1>
           <h5 class="text-dark mb-5">
             Okay, this is where the real fun starts! Here we are going to take a look at a few different types of components that Bootstrap has to offer. Let's start with Cards.
           </h5>
           <h3 class="text-dark pt-3">Cards</h3>
           <p class="text-dark">Okay so what exactly are we talking about with cards? Cards can be used in many different ways, but if you want an easy example, take a look at our topics up at the top of the page. See how nicely contained each box is? well you can do that and more with the card component.</p>
           <p class="text-dark">There are many different ways you can make a card with Bootstrap, but the thing you need to know is that they mainly consist of three parts: the card header, card body, and card footer. Any of these is optional, but you'll probably want to at least have a card body, and most of the time a card head.</p>
-          <div class="row mt-5 mb-5">
+          <div class="row mt-5 mb-3">
             <div class="col-lg-4">
-              <div class="card text-white bg-info pb-5">
+              <div class="card text-white bg-info pb-5 mb-5">
                 <div class="card-header font-weight-bold">Solid Card</div>
                 <div class="card-body">
                   <h5 class="card-title">Here's the title</h5>
@@ -112,7 +114,7 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="card">
+              <div class="card mb-5">
                 <img src="https://via.placeholder.com/500x100" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Card with image on the top</h5>
@@ -141,29 +143,60 @@
               <form class="text-light">
                 <div class="form-group">
                   <label for="fullname">Full Name</label>
-                  <input type="text" class="form-control" id="fullname" aria-describedby="nameHelp">
+                  <input type="text" class="form-control" id="fullname">
                 </div>
                 <div class="form-group">
                   <label for="inputemail">Email Address</label>
-                  <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="inputemail">
                 </div>
                 <button type="submit" class="btn btn-light">Submit</button>
               </form>
             </div>
-            <h3 class="text-dark">Jumbotrons</h3>
+            <h3 class="text-dark mt-5 pt-4">Jumbotrons</h3>
             <p>Okay, I'll admit it. This made it on the list simply because of it's awesome name. The Jumbotron is big for a reason; it is meant to prominently display the key information of your site. As such, it is perfect for something like a landing page.</p>
             <p>In order to make a jumbotron for yourself, you just need a div with the class of jumbotron. Inside, you'll want some reaaaaally big information, so maybe use an h1 with a big display (in bootstrap, you can use the class of display-# to increase the size of a h# tag). After your huge info, maybe some smaller lines and a button or link for the user to follow. Let's look at one in action.</p>
             <div class="jumbotron">
               <h1 class="display-4">Jumbotrons are cool</h1>
+              <p class="text-uppercase font-weight-light">Put a tagline here, or some other information that would encourage the user to click the button or link below</p>
+              <hr>
+              <a class="btn btn-warning btn-lg" href="#" role="button">Subscribe, submit, etc</a>
             </div>
           </div>
         </div>
+        <div class="container-md bg-light">
+            <h1 class="display-4 pb-3" id="layout">Layout</h1>
+            <h5 class="pb-3 font-italic">This is where things can get really cool with Bootstrap. Bootstrap uses a prebuilt grid system so that you don't have to.</h5>
+            <h5 class="font-weight-bold">What you need to know</h5>
+            <p>Forget about having to build your own grids. Did you forget it? Wow, that was fast. Okay, here's what you need to know. In order to utilise the 12 column system that Bootstrap has built-in, you'll have to place your content into containers, inside of which you'll have to have a div with the class of row, and inside of THAT, divs with the class of col, and another class denoting how many columns that specific block takes up. Sounds confusing, I know. So why don't I show you? Try resizing your browser window for this example, and see what happens to each box.</p>
+            <div class="container mt-5 mb-5">
+                <div class="row mb-3">
+                  <div class="col-md-6 col-lg-3 bg-primary p-3 text-white border border-dark">Column</div>
+                  <div class="col-md-6 col-lg-3 bg-warning p-3 text-white border border-dark">Column</div>
+                  <div class="col-md-6 col-lg-3 bg-danger p-3 text-white border border-dark">Column</div>
+                  <div class="col-md-6 col-lg-3 bg-info p-3 text-white border border-dark">Column</div>
+                </div>
+            </div>
+            <p>These columns have two important classes on them - <em>.col-md-6 and .col-lg-3.</em> What this means is that at the prebuilt Bootstrap medium breakpoint, each block occupies 6/12 of Bootstrap's pre-built column layout. Then, at the large Bootstrap breakpoint and above, the columns adhere to the second class of .col-lg-3, which means that each block now takes up 3/12 Bootstrap columns. Oh, and at any point less than the medium breakpoint, the columns automatically stack. Nice! This is a suuuuper convenient way to spread out your content if you want it in a nice, easily divisible grid layout. </p>
+            <h5 class="font-weight-bold">The last example</h5>
+            <p>Are you ready for the last example? I'm surprised you made it this far. Check out how we can really move things around using columns and rows inside a container with Bootstrap.</p>
+            <div class="container mb-5 mt-5">
+              <div class="row mb-3">
+                <div class="col-sm-3 order-sm-6 bg-info p-3 text-white border border-dark">#1</div>
+                <div class="col-sm-4 order-sm-3 bg-info p-3 text-white border border-dark">#2</div>
+                <div class="col-sm-9 order-sm-5 bg-info p-3 text-white border border-dark">#3</div>
+                <div class="col-sm-4 order-sm-2 bg-info p-3 text-white border border-dark">#4</div>
+                <div class="col-sm-4 bg-info p-3 text-white border border-dark">#5</div>
+                <div class="col-sm-12 order-sm-first bg-info p-3 text-white border border-dark">#6</div>
+              </div>
+            </div>
+            <h5>Okay, maybe this kind of situation won't come up often.</h5>
+            <p class="pb-5">But using the class of order-sm/md/lg/xl-# you can choose firstly what breakpoint you want this order to happen at, and secondly, you can choose which item you want where. This ordering ability coupled with the column layout ability makes one super powerful layout tool.</p>
+        </div>
       </div>
     </div>
-
-
-
-
+    <footer class="bg-dark d-flex align-items-center justify-content-center">
+      <p class="text-light p-3">Bootstrap instructions by Noam Stulberg</p>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
