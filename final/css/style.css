@@ -141,7 +141,7 @@ footer img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 0.2fr 1fr;
-    padding: 5rem 1.7rem;
+    padding: 2rem 1.7rem;
 }
 
 .landing-header h1 {
