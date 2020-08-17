@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Noto+Serif+SC:wght@500&display=swap');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css reset ends */
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Cinzel', serif;
+    line-height: 2.3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+body {
+    background-color: #f9f8f8;
+    color: #272838;
+    line-height: 1.4rem;
+}
+
+nav {
+    background-color: #272838;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 1rem;
+    margin-bottom: white 1px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f9f8f8;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+}
+
+nav ul li a:active {
+    color: rgb(158, 124, 214);
+}
+
+main {
+    margin: 1rem 1rem auto;
+    font-family: 'Noto Serif SC', serif;
+}
+
+.picture img {
+    width: 50%;
+    border-radius: 50%;
+    display: block;
+    margin: 1rem auto;  
+}
+
+.background p {
+    text-align: justify;
+}
+
+.background h2 {
+    margin: 1rem;
+    text-align: center;
+}
+
+
+/* styling the footer for mobile */
+
+.footer-main {
+    background-color: #272838;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.footer-main p {
+    color: #f9f8f8;
+    grid-column: 2 / 3;
+    text-align: center;
+}
+
+.social {
+    grid-column: 2 / 3;
+    justify-content: space-evenly;
+}
+
+.top-button {
+    grid-column: 3 / 4;
+}
