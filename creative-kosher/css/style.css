@@ -68,20 +68,23 @@ img {
 	width: 100%;
 }
 
-h1 {
+h1.big-david {
 	font-size: 2.5rem;
 }
 
+h1 {
+	font-size: 2.2rem;
+	text-align: center;
+	font-family: 'Merriweather', serif;
+}
+
 h2 {
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
 
-h3 {
-
-}
-
-h4 {
-
+.main-h2 {
+	margin: 1.25rem 0rem 0.5rem 0rem;
+	color: #b9519e;
 }
 
 p {
@@ -90,12 +93,78 @@ p {
 
 em {
 	color: #b9519e;
+	font-weight: bold;
+}
+
+.margin {
+	margin: 0.5rem
+}
+
+/* styling all the buttons */
+
+.button a {
+	display: inline-block;
+	background-color: white;
+	border: 1px;
+	border-style: solid;
+	border-color: #b9519e;
+    color: #b9519e;
+    padding: 0.2rem;
+    font-size: 18px;
+    width: 200px;
+	text-align: center;
+	margin: auto;
+}
+
+.button a:hover {
+	color: white;
+	background-color: #b9519e;
+	text-decoration: none;
+}
+
+.main-button a {
+	display: block;
+	margin: 1rem auto;
+	padding: 0.2rem;
+	width: 150px;
+}
+
+.long-button a {
+	display: block;
+	background-color: white;
+	border: 1px;
+	border-style: solid;
+	border-color: #b9519e;
+    color: #b9519e;
+    padding: 0.4rem;
+    font-size: 18px;
+    width: 275px;
+	text-align: center;
+	margin: 1rem auto;
+}
+
+.long-button a:hover {
+	color: white;
+	background-color: #b9519e;
+	text-decoration: none;
+}
+
+.carousel-indicators li.bg-dark {
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
 }
 
 /* styling the nav bar to override some bootstrap styles */
 
 header {
 	margin-top: 3rem #b9519e;
+}
+
+.pink-stripe {
+	background-color: #b9519e;
+	height: 7px;
+	display: none;
 }
 
 #navbar.navbar {
@@ -107,14 +176,591 @@ header {
 	margin-top: 3rem #b9519e;
 }
 
+.navbar-brand {
+	margin: auto;
+	position: relative;
+	left: 3%;
+}
+
+
+a.telephone-nav-link {
+	display: none;
+	flex-direction: row;
+	align-items: center;
+	text-decoration: none;
+	color: #6c757d;
+	max-width: 100px;
+}
+
+a.telephone-nav-link:hover {
+	color: rgba(255,255,255,.75);
+}
+
+.nav-social {
+	display: none;
+}
+
+/* some common elements across all pages */
 .vaad-certificate {
 	background-color: #b9519e;
 	color: white;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 0rem 0.5rem 1.5rem;
 }
 
-footer {
-	background-color: #da25da;
+.vaad-certificate img {
+	width: 50%;
+}
+
+.vaad-text p:nth-child(2) {
+	font-weight: bold;
+	font-size: 1.35rem;
+}
+
+.vaad-logo {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+.heading-block {
+	text-align: center;
+	padding: 1.5rem;
+	margin: -4.5rem 1.5rem 1.5rem 1.5rem;
+	background-color: #b9519e;
 	color: white;
+	position: relative;
+	max-width: 500px;
+}
+
+.heading-block-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.heading-block h2 {
+	font-size: 1.4rem;
+	margin-top: 0.7rem;
+	font-weight: bold;
+}
+
+.section {
+	margin: 1rem 1rem auto;
+	line-height: 2rem;
+}
+
+.section h1 {
+	color: #b9519e;
+	margin: 2rem 0rem 1rem 0rem;
+}
+
+.section h2 {
+	font-family: 'Merriweather', serif;
+	text-align: center;
+}
+
+.section p {
+	margin-bottom: 1rem;
+}
+
+.banner {
+	text-align: center;
+	padding: 1.5rem;
+	background-color: #b9519e;
+	color: white;
+	font-family: 'Merriweather', serif;
+}
+
+.banner h2 {
+	font-size: 1.8rem;
+}
+
+
+/* styling the footer for mobile */
+.icons {
+	background-color: #050404;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.icons img {
+	width: 2.5rem;
+	margin-right: 1rem;
+}
+
+.icons a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: bold;
+	padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.copyright {
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	background-color: #b9519e;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.copyright p {
+	font-size: 1.2rem;
+	text-align: left;
+}
+
+.copyright-social {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+.copyright img {
+	width: 3rem;
+	padding: 0.2rem;
+}
+
+/* styling the home page for mobile */
+
+.home-banner {
+	display: flex;
+	flex-direction: column-reverse;
+	background-color: #050404;
+	padding-bottom: 1.75rem;
+	padding-top: 1rem;
+}
+
+.home-banner-image {
+	width: 85%;
+	max-width: 380px;
+	margin: auto;
+	position: relative;
+	top: 2px;
+}
+
+.home-banner-text {
+	background-color: white;
+	margin: 0rem 1rem 1rem 1rem;
+	margin: auto;
+	padding: 1rem 1rem 1.2rem 1rem;
+	max-width: 400px;
+	line-height: 1.6rem;
+}
+
+.home-banner-text h1 {
+	margin: 0.75rem 0 0.9rem 0;
+	text-align: left;
+}
+
+.home-banner-text h2 {
+	margin-bottom: 0.8rem;
+	font-size: 1.75rem;
+}
+
+.home-banner-text p {
+	margin-bottom: 1rem;
+}
+
+/* styling the home card sections for mobile */
+
+.home-section {
+	width: 400px;
+	margin: auto;
+	margin-top: 1.75rem;
+	text-align: center;
+}
+
+.home-section h2 {
+	color: #b9519e;
+	margin: 1rem 0rem 0.5rem 0rem;
+}
+
+.home-section img {
+	height: 300px;
+	width: 400px;
+	object-fit: cover;
+	margin: auto;
+}
+
+.venues-banner {
+	margin-top: 1.75rem;
+}
+
+/* styling the ten to ten banner for mobile */
+
+.ten-to-ten {
+	background-image: url(../images/img-home/10to10mobile.png);
+	background-size: cover;
+	min-height: 150px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.ten-to-ten h2 {
+	font-family: 'Merriweather', serif;
+	font-style: italic;
+	font-size: 1.7rem;
+	margin-bottom: 1rem;
+}
+
+.ten-to-ten p {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+/* styling the testimonial section for mobile */
+
+.testamonials-banner {
+	margin-bottom: 1.75rem;
+}
+
+.testamonials {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.testamonial {
+	margin: 0rem 2rem 2rem 2rem auto;
+	max-width: 450px;
+}
+
+.testamonial p {
+	margin-bottom: 0.4rem;
+}
+
+.testamonial3 {
+	margin-bottom: 2rem;
+}
+
+.quotes {
+	max-width: 10%;
+	display: block;
+	margin: auto;
+
+
+}
+
+/* styling the catering page for mobile */
+
+.catering-content h2 {
+	margin: 1.25rem 0rem 0.5rem 0rem;
+	color: #b9519e;
+}
+
+.catering-content img {
+	max-width: 490px;
+	display: block;
+	margin: auto;
+}
+
+.catering-content .button {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+/* styling the party design page for mobile */
+
+.party-content img {
+	max-width: 490px;
+	display: block;
+	margin: auto;
+}
+
+.party-content .button {
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+}
+
+/* styling the food shop page for mobile */
+
+.food-shop-banner img {
+	height: 292.2px;
+	object-fit: cover;
+}
+
+.covid19 {
+	background-color: #b9519e;
+	padding: 1rem 1rem 2rem 1rem;
+	color: white;
+	line-height: 1.6rem;
+}
+
+/* styling the covid 19 block for mobile */
+
+.covid19 h2 {
+	margin: 1rem 0rem;
+	color: white;
+	font-family: 'Merriweather', serif;
+}
+
+.covid19 em {
+	color: white;
+}
+
+.food-shop-cards {
+	margin-bottom: 2rem;
+}
+
+.food-shop-cards h2 {
+	color: #b9519e;
+}
+
+.cards img {
+	height: 225px;
+	object-fit: cover;
+	margin: 2rem 0rem 1rem 0rem;
+}
+
+.cards p {
+	margin-top: 1rem;
+}
+
+.cards h2 {
+	text-align: left;
+}
+
+/* styling the passover page for mobile */
+
+.passover-banner img {
+	height: 292.2px;
+	object-fit: cover;
+}
+
+.passover-pdf {
+	margin-bottom: 1.5rem;
+}
+
+.our-office {
+	margin-bottom: 1.5rem;
+}
+
+.our-office a {
+	color: #050404;
+}
+
+.our-office a:hover { 
+	text-decoration: none;
+	color: #b9519e;
+}
+
+/* styling the gallery for mobile */
+
+.gallery-h2 {
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	margin-top: 0.7rem;
+}
+
+.gallery-intro {
+	background-color: #050404;
+	color: white;
+	text-align: center;
+	line-height: 2.5rem;
+	padding: 1.75rem 1.75rem 0.5rem 1.75rem;
+}
+
+.galleries {
+	background-color: #050404;
+}
+
+.gallery-button {
+	padding: 2rem;
+}
+
+.gallery-button a {
+	display: block;
+	background-color: #b9519e;
+	color: white;
+    padding: 0.75rem;
+	font-size: 18px;
+	font-weight: bold;
+    width: 250px;
+	text-align: center;
+	margin: auto;
+	text-decoration: none;
+}
+
+.gallery-button a:hover {
+	background-color: white;
+	color: #b9519e;
+}
+
+.gallery-design {
+	padding-bottom: 2rem;
+}
+
+/* styling the contact page for mobile */
+
+.contact-info-start {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.contact-info-start p {
+	text-align: center;
+}
+
+.contact-info-start p:nth-child(1) {
+	margin-bottom: 0;
+}
+
+.contact-info-start a {
+	color: #050404;
+}
+
+.contact-info-start a:hover {
+	color: #b9519e;	
+	text-decoration: none;
+}
+
+.contact-info-table table {
+	margin: auto;
+	font-size: 1.2rem;
+}
+
+table td {
+	padding: 0rem 0.5rem 0rem 0rem;
+}
+
+.contact-info-table p {
+	font-style: italic;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.contact-map {
+	margin-bottom: 2rem;
+}
+
+.contact-map iframe {
+	display: block;
+	margin: auto;
+}
+
+.contact-photos img {
+	height: 400px;
+	width: 400px;
+	object-fit: cover;
+	display: block;
+	border: 5px solid #b9519e;
+	margin: 1rem auto;
+
+}
+
+/* first media query for tablet view */
+
+@media(min-width: 768px) {
+	
+	/* styling the home page for tablet */
+
+	.home-banner-text {
+		max-width: 500px;
+	}
+
+	.home-banner-image {
+		max-width: 450px;
+	}
+
+	.home-section {
+		width: 500px;
+		margin-bottom: ;
+	}
+
+	.home-section img {
+		height: 400px;
+		width: 500px;
+	}
+
+	/* styling the footer for tablet */
+
+	.icons, .copyright {
+		padding: 1rem 1.75rem 1rem 1.75rem;
+	}
+
+	/* styling the catering page for tablet */
+
+	.catering-content {
+		max-width: 768px;
+		margin: auto;
+	}
+
+	/* styling the party design page for tablet */
+
+	.party-content {
+		max-width: 768px;
+		margin: auto;
+	}
+
+	/* stlying the heading block and common margins for tablet */
+
+	.heading-block {
+		padding: 2rem 4rem 2rem 4rem;
+	}
+
+	/* styling the food shop for tablet */
+
+	.food-shop-intro {
+		max-width: 768px;
+		margin: auto;
+	}
+
+
+
+	.covid19 p, .covid19 h2 {
+		max-width: 768px;
+		margin: auto;
+	}
+
+	.food-shop-cards img {
+		height: 325px;
+	}
+
+	.food-shop-cards {
+		max-width: 768px;
+		margin: auto;
+	}
+
+	/* styling passover for tablet */
+
+	.passover-content {
+		max-width: 768px;
+		margin: auto;
+	}
+
+	/* styling the contact page for tablet */
+
+	.contact-photos img {
+		height: 300px;
+		width: 300px;
+	}
+
+	.contact-photos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 675px;
+		margin: auto;
+	}
+
+	.contact-map iframe {
+		width: 500px;
+	}
 }
