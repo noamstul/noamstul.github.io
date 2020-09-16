@@ -540,22 +540,6 @@ form button {
         padding-bottom: 2rem;
     }
 
-    #contact-form form {
-
-    }
-
-    #contact-form form .form-group:nth-child(3) {
-        
-    }
-
-    #contact-form form .form-group:nth-child(4) {
-        
-    }
-
-    form button {
-        
-    }
-
     .resume {
         padding: 1rem 0;
     }
@@ -682,9 +666,5 @@ form button {
     .main-contact {
         margin: 5rem auto;
         width: 992px;
-    }
-
-    form button {
-        
     }
 }
