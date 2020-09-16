@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Sacramento|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Fauna+One&family=Montserrat:wght@300;400&family=Playfair+Display:wght@600&family=Sacramento&family=Gentium+Basic&family=Vollkorn:wght@700&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -53,7 +53,7 @@ table {
 /* css reset ends, begins setting up basic styling for h1s etc*/
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #DDDDDD;
+    background-color: #ffffff;
     line-height: 2.2rem;
 }
 img {
@@ -62,41 +62,45 @@ img {
 }
 
 h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    font-family: 'Playfair Display', serif;
     font-weight: 300;
 }
 
 h2 {
     font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 h3 {
     font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
 
 h4 {
     font-size: 1.25rem;
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
 
 p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+}
+
+em {
+    font-weight: bold;
 }
 
 /*I'll be using a combination of Bootstrap and CSS to style this site */
 #navbar.navbar {
-    background-color: #4B5358;
-    font-family: 'Sacramento', cursive;
+    background-color: #493ad3;
+    font-family: 'Fauna One', serif;
     font-size: 1.3rem;
 }
 
 .navbar a {
     margin-left: 1rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 a:link,
@@ -108,8 +112,8 @@ a:active{
 }
 
 footer {
-    background-color: #4B5358;
-    font-family: 'Sacramento', cursive;
+    background-color: #493ad3;
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: white;
     display: flex;
@@ -152,17 +156,21 @@ footer img {
 }
 
 .landing-banner h1 {
-    font-family: 'Sacramento', cursive;
+    font-family: 'Playfair Display', serif;
     grid-column: 2 / 3;
     align-self: center;
+}
+
+.landing-banner h1 em {
+    color: #493ad3;
 }
 
 .landing-header h3 {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
     text-align: center;
-    font-size: 2.2rem;
-    font-family: 'Sacramento', cursive;
+    font-size: 1.75rem;
+    font-family: 'Alice', serif;
 }
 
 .landing-banner img {
@@ -183,16 +191,25 @@ footer img {
 }
 
 .landing-nav li a {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #104547;
+    font-family: 'Fauna One', serif;
+    background-color: #493ad3;
     color: white;
     padding: 1.1rem;
     border-radius: 4px;
-    font-size: 18px;
+    font-size: 1.2rem;
     display: inline-block;
     width: 150px;
     text-align: center;
     box-shadow: 0px 8px 10px rgb(119, 119, 119);
+}
+
+.landing-nav li a:hover {
+    animation-name: landingbuttoncolor;
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 /* styling the about page for mobile */
@@ -209,6 +226,21 @@ footer img {
 
 .about-body p {
     margin: 0.5rem 2rem auto;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.about-image img {
+    border: 5px solid #493ad3;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: 55% 50%;
 }
 
 /* styling the portfolio for mobile */
@@ -253,40 +285,65 @@ footer img {
     font-size: 2rem;
     text-align: center;
     padding: 2rem 0rem;
+    margin: 3rem 0rem 1rem 0rem;
     color: white;
-    background-color: #104547;
+    background-color: #493ad3;
 }
 
 .external-link {
-    margin: 2rem 1rem 2rem 0rem;
+    margin: 2rem 0rem 2rem 0rem;
+    display: flex;
+    justify-content: center;
 }
 
 .external-link a {
+    display: inline-block;
     padding: 1rem;
-    background-color: #4B5358;
+    background-color: #493ad3;
     color: white;
     border-radius: 5px;
     box-shadow: 0px 8px 10px rgb(119, 119, 119);
-    margin: 2rem 1rem 2rem 0rem;
 }
 
 .external-link a:hover {
-    animation-name: buttoncolor;
-    animation-duration: 1s;
+    animation-name: landingbuttoncolor;
+    animation-duration: 0.3s;
     animation-delay: 0s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-.external-link:hover {
-    animation-name: buttonbounce;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.creative-kosher p {
+    margin-bottom: 1.5rem;
 }
+
+#graphics-carousel {
+    max-width: 400px;
+    margin: auto;
+}
+
+.videography-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.videography-video iframe {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+}
+
+.user-experience-images {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-experience-images img {
+    width: 50%;
+}
+
 /* styling the contact page for mobile */
 
 .main-contact {
@@ -301,37 +358,12 @@ footer img {
 .main-contact p {
     margin: 1rem 0rem;
 }
-#contact-form {
-    background-image: url("../images/Storyboard-Stulberg.jpg");
-    background-size: cover;
-}
 
 form button {
     width: 100%;
 }
 
 /* keyframes*/
-@keyframes buttonbounce {
-    0% {
-        transform: translateY(10px);
-    }
-
-    25% {
-        transform: translateY(-10px);
-    }
-
-    50% {
-        transform: translateY(5px);
-    }
-
-    75% {
-        transform: translateY(-5px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
 
 @keyframes buttoncolor {
     0% {
@@ -340,6 +372,18 @@ form button {
 
     100% {
         background-color: #104547;
+    }
+}
+
+@keyframes landingbuttoncolor {
+    0% {
+        background-color: #493ad3;
+        color: white;
+    }
+
+    100% {
+        background-color: #373d41;
+        color: white;
     }
 }
 
@@ -390,9 +434,8 @@ form button {
     }
 
     .about-text {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 0.5fr 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
     .about-image {
@@ -438,66 +481,53 @@ form button {
     .portfolio h2 {
         margin-top: 3rem;
     }
+
+    #photography-carousel {
+        max-width: 650px;
+        margin: auto;
+        padding-top: 2rem;;
+    }
     /* web design section */
 
     .arc-example {
         margin-top: 2rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 5%;
     }
 
     /* styling the digital graphics section for tablet */
-    .app-images {
-        padding-top: 2rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-    }
 
-    .app-images img:nth-child(3) {
-        grid-column: 1 / 3;
-        grid-row: 2 / 4;
-    }
 
-    .poster-grid img {
-        width: 384px;
-    }
+
     /* stlying the movie poster section for tablet */
 
-    .poster-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .poster-grid img {
+        width: 60%;
+        margin: auto;
     }
 
     /* photogrpahy and video section for tablet*/
 
-    .photography {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 1rem;
-    }
 
     .videography-video {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr;
         grid-gap: 1rem;
     }
 
+    .videography-video p {
+        grid-column: 1 / 3;
+    }
+
     .videography-video iframe {
-        grid-column: 2 / 3;
+        grid-row: 2 / 3;
     }
 
     /* ux section for tablet */
 
     .user-experience-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .ux-links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        width: 50%;
+        margin: auto;
+        padding-top: 2rem;
     }
 
     /* contact form for tablet */
@@ -511,23 +541,19 @@ form button {
     }
 
     #contact-form form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 0.5fr;
-        column-gap: 3%;
+
     }
 
     #contact-form form .form-group:nth-child(3) {
-        grid-column: 1 / 3;
+        
     }
 
     #contact-form form .form-group:nth-child(4) {
-        grid-column: 1 / 3;
+        
     }
 
     form button {
-        margin-top: 1rem;
-        grid-column: 1 / 3;
+        
     }
 
     .resume {
@@ -537,7 +563,7 @@ form button {
 
 /* second media query for desktop */
 
-@media(min-width: 992px) {
+@media(min-width: 996px) {
     /* landing page for desktop */
 
     footer p {
@@ -583,18 +609,14 @@ form button {
 
     /* about page for desktop */
 
-
-    .about-text p {
-        grid-column: 2 / 3;
-    }
-
-    .about-image {
-        grid-column: 1 / 2;
-        grid-row: 2 / 4;
-    }
-
     .about-main {
         margin: 5rem;
+    }
+
+    .about-body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     /* portfolio for desktop */
@@ -606,6 +628,15 @@ form button {
 
     .portfolio-intro p {
         margin: 1.5rem 0 1.5rem 0;
+    }
+
+    .user-experience-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .user-experience-images img {
+        width: 100%;
     }
 
     .bootstrap-content {
@@ -623,42 +654,25 @@ form button {
     .app-icon {
         margin-bottom: 5rem;
     }
-    
-    .app-images {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        margin: 2rem 0;
-    }
-
-    .app-images img:nth-child(3) {
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-    }
 
     .poster-grid img:hover {
         animation: buttongrow 0.3s ease-in 0s 1 forwards;
     }
 
-    /* photography for desktop */
-
-    .photography {
-        grid-template-rows: 0.5fr 1fr 1fr;
+    .movie-poster h2 {
+        text-align: left;
     }
 
-    .photography-images {
+    .poster-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column: 1 / 3;
-        grid-row: 2 / 4;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .photography-images img:hover {
-        animation: buttongrow 0.3s ease-in 0s 1 forwards;
+    /* photography for desktop */
+    #photography-carousel {
+        max-width: 100%;
     }
-
-    .photography-text {
-        grid-column: 1 / 3;
-    }
+   
 
     /* ux section for desktop */
 
@@ -671,8 +685,6 @@ form button {
     }
 
     form button {
-        width: 30%;
-        grid-column: 2 / 3;
-        justify-self: end;
+        
     }
 }
