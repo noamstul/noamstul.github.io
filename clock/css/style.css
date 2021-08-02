@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@1&family=IBM+Plex+Mono&family=Quicksand:wght@300&display=swap');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS Reset Ends */
+
+h1 {
+    font-size: 3rem;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    height: 75vh;
+    border-radius: 2%;
+    text-align: center;
+}
+
+#greeting {
+    padding-bottom: 2rem;
+}
+
+.dark-display {
+    background: rgba(0, 0, 0, 0.603);
+    color: white;
+}
+
+.light-display {
+    background: rgba(255, 255, 255, 0.603);
+    color: black;
+}
+
+.old-school {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.new-school {
+  font-family: 'Quicksand', sans-serif;
+}
+
+#time {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+#period {
+  padding-left: 0.75rem;
+}
+
+#date {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+#weekday {
+  padding-right: 0.3rem;
+}
+
+#month {
+  padding-right: 0.3rem;
+}
+
+#show-more {
+  margin-top: 1rem;
+}
+
+#year {
+  margin-right: 0.3rem;
+}
+
+#more-info {
+  display: flex;
+  padding-top: 0.4rem;
+  font-size: 1.2rem;
+}
+
+#settings {
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  display: none;
+  box-sizing: border-box;
+  background-color: rgba(194, 194, 194, 0.747);
+  padding: 5rem 1rem 3rem 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+}
+
+#setting1, #setting2 {
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+#sidebar-toggle {
+  position: fixed;
+  border: 1px solid rgb(22, 22, 22);
+  z-index: 6;
+  right: 10px;
+  top: 3px;
+  transform: rotate(90deg);
+  padding: 0.75rem;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  background-color: rgb(77, 77, 77);
+  color: white;
+}
+/* This is styling to turn my checkboxes into toggle switches. This was sourced from w3schools, and here's the link: https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(133, 133, 133);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  /* media query for tablet view */
+
+  @media(min-width: 768px) {
+    #time {
+      font-size: 2.75rem;
+    }
+    
+    #sidebar-toggle {
+      font-size: 1.75rem;
+      padding: 1rem 1rem 1rem 1rem;
+      
+    }
+
+  }
+
