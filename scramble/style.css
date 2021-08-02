@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS RESET ENDS*/
+
+.wrapper {
+    background-image: url(images/fruits.jpg);
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Staatliches', cursive;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+#app {
+    background: rgb(255,136,0);
+    background: radial-gradient(circle, rgba(255,136,0,0.9528186274509804) 46%, rgba(255,72,72,1) 85%, rgb(255, 75, 75) 93%);
+    border-radius: 20px;
+    padding: 1rem;
+    color: white;
+    height: 350px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.play {
+    background-color: rgb(255, 75, 75);
+    color: white;
+    font-size: 1.75rem;
+    font-family: 'Staatliches', cursive;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 239, 17);
+    margin-bottom: 1rem;
+}
+
+.message {
+    text-align: center;
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+}
+
+.score p {
+    font-size: 1.5rem;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.strikes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.target {
+    text-align: center;
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button.pass {
+    background-color: rgb(255, 75, 75);
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Staatliches', cursive;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 239, 17);
+    margin-bottom: 1rem;
+}
+
+#playAgain {
+    display: flex;
+    justify-content: center;
+}
+
+button#againButton {
+    margin-top: 1rem;
+}
+
+button:disabled {
+    background-color: rgb(126, 126, 126);
+}

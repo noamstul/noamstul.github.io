@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fruit Scramble!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="app">
+      <h1>Fruit Scramble!</h1>
+        <div v-if="!game.active" class="intro" id="intro">
+          <button class="play" @click="playGame">PLAY</button>
+          <p>Hit "Play" to begin!</p>
+        </div>
+      <div id="game" v-if="game.active">
+        <div class="message" id="message">{{ game.message }}</div>
+        <div id="playAgain" v-if="game.points >= 10 || game.strikes >= 3" @click="resetGame">
+          <button class="play" id="againButton">Play Again?</button>
+        </div>
+        <div class="game-body" v-else>
+          <div class="score" id="score">
+            <div class="points">
+              <p>{{ game.points }}</p>
+              <h3>Points</h3>
+            </div>
+            <div class="strikes" :max="max">
+              <p>{{ game.strikes }}</p>
+              <h3>Strikes</h3>
+            </div>
+          </div>
+          <div class="target" id="target">
+            {{ game.word }}
+          </div>
+          <div class="user-input">
+            <form @submit.prevent="verifyGuess">
+              <input type="text" v-model="game.guess">
+            </form>
+            <button @click="pass" type="submit" class="pass" :disabled="game.passes <= 0">{{ game.passes }} passes remaining</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scramble.js"></script>
+</body>
+
+</html>
