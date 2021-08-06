@@ -223,37 +223,37 @@ document.getElementById('aPine').addEventListener('click', function(){
 })
 
 document.getElementById('aMapleleaf').addEventListener('click', function(){
-  let track = new Audio('/audio/mapleleaf.mp3')
+  let track = new Audio('audio/mapleleaf.mp3')
   track.play()
 })
 
 document.getElementById('aSage').addEventListener('click', function(){
-  let track = new Audio('/audio/sage.mp3')
+  let track = new Audio('audio/sage.mp3')
   track.play()
 })
 
 document.getElementById('aSumac').addEventListener('click', function(){
-  let track = new Audio('/audio/sumac.mp3')
+  let track = new Audio('audio/sumac.mp3')
   track.play()
 })
 
 document.getElementById('aCedar').addEventListener('click', function(){
-  let track = new Audio('/audio/cedar.mp3')
+  let track = new Audio('audio/cedar.mp3')
   track.play()
 })
 
 document.getElementById('aTobacco').addEventListener('click', function(){
-  let track = new Audio('/audio/tobacco.mp3')
+  let track = new Audio('audio/tobacco.mp3')
   track.play()
 })
 
 document.getElementById('aSweetgrass').addEventListener('click', function(){
-  let track = new Audio('/audio/sweetgrass.mp3')
+  let track = new Audio('audio/sweetgrass.mp3')
   track.play()
 })
 
 document.getElementById('aMullein').addEventListener('click', function(){
-  let track = new Audio('/audio/mullein.mp3')
+  let track = new Audio('audio/mullein.mp3')
   track.play()
 })
 
