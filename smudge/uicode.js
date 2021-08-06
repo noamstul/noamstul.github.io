@@ -218,7 +218,7 @@ restart.addEventListener('click', function() {
 
 //eventlisteners for instruction text audio
 document.getElementById('aPine').addEventListener('click', function(){
-  let track = new Audio('/audio/pine.mp3')
+  let track = new Audio('audio/pine.mp3')
   track.play()
 })
 
