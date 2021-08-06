@@ -162,7 +162,7 @@ audio.addEventListener('mouseleave', function() {
 
 audio.addEventListener('click', function() {
   let english = document.getElementById('english')
-  let track = new Audio('audio/' + english.innerHTML + '.mp3')
+  let track = new Audio('audio/' + english.innerHTML.toLowerCase() + '.mp3')
   track.play()
 })
 
