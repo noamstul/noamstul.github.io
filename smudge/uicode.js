@@ -87,7 +87,7 @@ function makeDraggable(evt) {
               guessed++
               tittle.innerHTML = `<tspan id="english" class="english">${herbs[guessed]}</tspan>` + `<tspan class="dot"> ● </tspan>` + `<tspan id="algonquin" class="algonquin">${words[guessed]}</tspan>`
               console.log(guessed)
-              let track = new Audio('audio/' + document.getElementById('english').innerHTML + '.mp3')
+              let track = new Audio('audio/' + document.getElementById('english').innerHTML.toLowerCase() + '.mp3')
               track.play()
               if (guessed === 8) {
                 instructions.style.visibility = 'visible'
