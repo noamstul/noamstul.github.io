@@ -51,6 +51,10 @@ table {
 	border-spacing: 0;
 }
 /* css reset ends, begins setting up basic styling for h1s etc*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #ffffff;
@@ -355,7 +359,6 @@ footer img {
 
 .main-contact {
     margin: 1rem 2rem auto;
-    height: 70vh;
 }
 
 .main-contact h1 {
