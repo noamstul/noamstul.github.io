@@ -1,0 +1,151 @@
+{
+  "categories": [
+    "Web Development",
+    "Accessibility",
+    "Work Experience",
+    "Design & Media",
+    "Education & Training"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "categoryId": 0,
+      "value": 200,
+      "question": "Which programming language is commonly used to create interactive features on a website?",
+      "options": ["HTML", "CSS", "JavaScript", "Photoshop"],
+      "answer": "JavaScript",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! JavaScript brings interactivity to websites.",
+        "incorrect": "That's incorrect. HTML and CSS build structure and style, but JavaScript adds interactivity.",
+        "generic": "Used for interactive behavior on websites."
+      }
+    },
+    {
+      "id": 2,
+      "categoryId": 0,
+      "value": 400,
+      "question": "Which JavaScript framework did you use to build a Jeopardy-style quiz tool at CSPS?",
+      "options": ["React", "Vue", "Angular", "jQuery"],
+      "answer": "Vue",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! Vue was your tool of choice for building interactive CSPS components.",
+        "incorrect": "Not quite. Vue was used for this project.",
+        "generic": "A modern framework great for building scalable web apps."
+      }
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "value": 200,
+      "question": "Which guideline ensures digital content is accessible to people with disabilities?",
+      "options": ["SEO", "WCAG", "HTML5", "ARIA"],
+      "answer": "WCAG",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! WCAG ensures accessibility for all.",
+        "incorrect": "WCAG is the correct accessibility standard.",
+        "generic": "These guidelines are essential for accessible content."
+      }
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "value": 600,
+      "question": "Which ARIA attribute is used to announce changes in content for screen readers?",
+      "options": ["aria-hidden", "aria-expanded", "aria-live", "aria-label"],
+      "answer": "aria-live",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! aria-live helps users stay informed.",
+        "incorrect": "It's aria-live that makes dynamic content accessible.",
+        "generic": "Screen readers need this to detect content updates."
+      }
+    },
+    {
+      "id": 5,
+      "categoryId": 2,
+      "value": 400,
+      "question": "Where did you lead the development of a digital course on antisemitism?",
+      "options": ["TD Bank", "Nokia", "CSPS", "Algonquin College"],
+      "answer": "CSPS",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! You helped shape this course at CSPS.",
+        "incorrect": "This course was developed at the Canada School of Public Service.",
+        "generic": "A major federal learning institution."
+      }
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "value": 800,
+      "question": "At which organization did you work on mutual fund applications and client financial solutions?",
+      "options": ["CSPS", "Nokia", "TD Canada Trust", "Export Development Canada"],
+      "answer": "TD Canada Trust",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! You advised clients and handled investments at TD.",
+        "incorrect": "This was part of your experience at TD Canada Trust.",
+        "generic": "Think banking and financial advising."
+      }
+    },
+    {
+      "id": 7,
+      "categoryId": 3,
+      "value": 200,
+      "question": "Which Adobe tool is primarily used for editing raster images?",
+      "options": ["Illustrator", "InDesign", "Photoshop", "Xd"],
+      "answer": "Photoshop",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! Photoshop is your go-to for image editing.",
+        "incorrect": "Photoshop is the tool for raster graphics.",
+        "generic": "It’s part of Adobe’s Creative Cloud suite."
+      }
+    },
+    {
+      "id": 8,
+      "categoryId": 3,
+      "value": 600,
+      "question": "What design tool did you use to create wireframes and UI mockups at CSPS?",
+      "options": ["Penpot", "Xd", "Photoshop", "Premier Pro"],
+      "answer": "Xd",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! Adobe Xd was used for interface mockups.",
+        "incorrect": "Xd is the specialized tool for UX/UI.",
+        "generic": "Great for interactive wireframes and design prototypes."
+      }
+    },
+    {
+      "id": 9,
+      "categoryId": 4,
+      "value": 200,
+      "question": "Where did you earn your Interactive Media Design diploma?",
+      "options": ["York University", "CSPS", "Algonquin College", "Carleton University"],
+      "answer": "Algonquin College",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! You graduated from Algonquin with a 4.0 GPA.",
+        "incorrect": "That’s not it. Algonquin College is the right answer.",
+        "generic": "This program helped launch your design career."
+      }
+    },
+    {
+      "id": 10,
+      "categoryId": 4,
+      "value": 600,
+      "question": "Which course did you help deliver as part of a class project for Kitigan Zibi Anishinaabeg?",
+      "options": ["Anti-racism in Canada", "Cybersecurity 101", "Smudging and Indigenous Traditions", "Digital Government"],
+      "answer": "Smudging and Indigenous Traditions",
+      "attempted": false,
+      "feedback": {
+        "correct": "Correct! This was a cultural learning game on smudging.",
+        "incorrect": "It was the Smudging and Indigenous Traditions course.",
+        "generic": "This course was developed in collaboration with a First Nations community."
+      }
+    }
+  ]
+}

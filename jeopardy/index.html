@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="color-scheme" content="dark light" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jeopardy Game</title>
+		<!-- Template CSS -->
+		<link rel="stylesheet" href="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/css/styles.min.css" />
+		<link rel="stylesheet" href="https://app.csps-efpc.gc.ca/shared/LCS_HTML_Templates/CSPS_Template_2021/_assets/thirdpartylib/bootstrap-4.3.1/css/bootstrap.min.css" />
+		<script type="module" crossorigin src="/noamstul.github.io/jeopardy/assets/index-I0ErkM3y.js"></script>
+		<link rel="stylesheet" crossorigin href="/noamstul.github.io/jeopardy/assets/index-B2GoMXsS.css">
+	</head>
+	<body>
+		<!-- data game mode determines if the game mode is single player or multiplayer. set single-player for single, or multi-player for multiple -->
+		<div id="app" data-game-mode="single-player"></div>
+		<div class="get-content">
+			<!-- this table allows you to add your questions directly in the brightspace editor. the first table is the categories, the second is for the questions -->
+			<div class="table-responsive">
+				<table class="table" contenteditable="true" data-table-name="categories">
+					<caption>
+						Categories
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">
+								<p>Categories</p>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Web Development</td>
+						</tr>
+						<tr>
+							<td>Accessibility</td>
+						</tr>
+						<tr>
+							<td>Work Experience</td>
+						</tr>
+						<tr>
+							<td>Design & Media</td>
+						</tr>
+						<tr>
+							<td>Education & Training</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="table-responsive">
+				<table class="table" contenteditable="true" data-table-name="questions">
+					<caption>
+						Questions
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Category</th>
+							<th scope="col">Value</th>
+							<th scope="col">Question</th>
+							<th scope="col">Options</th>
+							<th scope="col">Answer</th>
+							<th scope="col">Correct Feedback</th>
+							<th scope="col">Incorrect Feedback</th>
+							<th scope="col">Generic Feedback</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Web Development</td>
+							<td>200</td>
+							<td>Which programming language is commonly used to create interactive features on a website?</td>
+							<td>
+								<p>HTML</p>
+								<p>CSS</p>
+								<p>JavaScript</p>
+								<p>Photoshop</p>
+							</td>
+							<td>JavaScript</td>
+							<td>Correct! JavaScript brings interactivity to websites.</td>
+							<td>That's incorrect. HTML and CSS build structure and style, but JavaScript adds interactivity.</td>
+							<td>Used for interactive behavior on websites.</td>
+						</tr>
+						<tr>
+							<td>Web Development</td>
+							<td>400</td>
+							<td>Which JavaScript framework did Noam use to build this Jeopardy-style quiz tool while at CSPS?</td>
+							<td>
+								<p>React</p>
+								<p>Vue</p>
+								<p>Angular</p>
+								<p>jQuery</p>
+							</td>
+							<td>Vue</td>
+							<td>Correct! Vue was your tool of choice for building interactive CSPS components.</td>
+							<td>Not quite. Vue was used for this project.</td>
+							<td>A modern framework great for building scalable web apps.</td>
+						</tr>
+						<tr>
+							<td>Accessibility</td>
+							<td>200</td>
+							<td>Which guideline ensures digital content is accessible to people with disabilities?</td>
+							<td>
+								<p>SEO</p>
+								<p>WCAG</p>
+								<p>HTML5</p>
+								<p>ARIA</p>
+							</td>
+							<td>WCAG</td>
+							<td>Correct! WCAG ensures accessibility for all.</td>
+							<td>WCAG is the correct accessibility standard.</td>
+							<td>These guidelines are essential for accessible content.</td>
+						</tr>
+						<tr>
+							<td>Accessibility</td>
+							<td>600</td>
+							<td>Which ARIA attribute is used to announce changes in content for screen readers?</td>
+							<td>
+								<p>aria-hidden</p>
+								<p>aria-expanded</p>
+								<p>aria-live</p>
+								<p>aria-label</p>
+							</td>
+							<td>aria-live</td>
+							<td>Correct! aria-live helps users stay informed.</td>
+							<td>It's aria-live that makes dynamic content accessible.</td>
+							<td>Screen readers need this to detect content updates.</td>
+						</tr>
+						<tr>
+							<td>Work Experience</td>
+							<td>400</td>
+							<td>Where did Noam lead the development of a digital course on antisemitism?</td>
+							<td>
+								<p>TD Bank</p>
+								<p>Nokia</p>
+								<p>CSPS</p>
+								<p>Algonquin College</p>
+							</td>
+							<td>CSPS</td>
+							<td>Correct! You helped shape this course at CSPS.</td>
+							<td>This course was developed at the Canada School of Public Service.</td>
+							<td>A major federal learning institution.</td>
+						</tr>
+						<tr>
+							<td>Work Experience</td>
+							<td>800</td>
+							<td>At which organization did Noam work on mutual fund applications and client financial solutions?</td>
+							<td>
+								<p>CSPS</p>
+								<p>Nokia</p>
+								<p>TD Canada Trust</p>
+								<p>Export Development Canada</p>
+							</td>
+							<td>TD Canada Trust</td>
+							<td>Correct! You advised clients and handled investments at TD.</td>
+							<td>This was part of your experience at TD Canada Trust.</td>
+							<td>Think banking and financial advising.</td>
+						</tr>
+						<tr>
+							<td>Design & Media</td>
+							<td>200</td>
+							<td>Which Adobe tool is primarily used for editing raster images?</td>
+							<td>
+								<p>Illustrator</p>
+								<p>InDesign</p>
+								<p>Photoshop</p>
+								<p>Xd</p>
+							</td>
+							<td>Photoshop</td>
+							<td>Correct! Photoshop is your go-to for image editing.</td>
+							<td>Photoshop is the tool for raster graphics.</td>
+							<td>It’s part of Adobe’s Creative Cloud suite.</td>
+						</tr>
+						<tr>
+							<td>Design & Media</td>
+							<td>600</td>
+							<td>What design tool did Noam use to create wireframes and UI mockups at CSPS?</td>
+							<td>
+								<p>Penpot</p>
+								<p>Xd</p>
+								<p>Photoshop</p>
+								<p>Premier Pro</p>
+							</td>
+							<td>Xd</td>
+							<td>Correct! Adobe Xd was used for interface mockups.</td>
+							<td>Xd is the specialized tool for UX/UI.</td>
+							<td>Great for interactive wireframes and design prototypes.</td>
+						</tr>
+						<tr>
+							<td>Education & Training</td>
+							<td>200</td>
+							<td>Where did Noam earn his Interactive Media Design diploma?</td>
+							<td>
+								<p>York University</p>
+								<p>CSPS</p>
+								<p>Algonquin College</p>
+								<p>Carleton University</p>
+							</td>
+							<td>Algonquin College</td>
+							<td>Correct! Noam graduated from Algonquin with a 4.0 GPA.</td>
+							<td>That’s not it. Algonquin College is the right answer.</td>
+							<td>This program helped launch Noam's design career.</td>
+						</tr>
+						<tr>
+							<td>Education & Training</td>
+							<td>600</td>
+							<td>In which course did Noam deliver a final project in the form of an e-learning game on the topic of Smudging?</td>
+							<td>
+								<p>Anti-racism in Canada</p>
+								<p>Cybersecurity 101</p>
+								<p>Applied Projects</p>
+								<p>Digital Government</p>
+							</td>
+							<td>Smudging and Indigenous Traditions</td>
+							<td>Correct! This was a cultural learning game on smudging.</td>
+							<td>It was the Smudging and Indigenous Traditions course.</td>
+							<td>This course was developed in collaboration with a First Nations community.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</body>
+</html>
