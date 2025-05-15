@@ -47,7 +47,7 @@ const app = Vue.createApp({
         guess: '',
         target: '',
         word: '',
-        words: ['apple', 'banana', 'cherry', 'strawberry', 'guava', 'watermelon', 'kiwi', 'cantaloupe', 'pineapple', 'orange']
+        words: ['apple', 'banana', 'cherry', 'strawberry', 'guava', 'watermelon', 'kiwi', 'cantaloupe', 'pineapple', 'orange', 'raspberry', 'dragonfruit', 'starfruit', 'pomegranate', 'honeydew', 'jackfruit', 'blackberry', 'grape', 'pear']
       }
     }
   },
@@ -82,7 +82,7 @@ const app = Vue.createApp({
     }, 
     /*This function handles the guess verification. if its correct, points increase, then it checks if the player has 10 points (win condition). if not, it moves to the next random word. If it's wrong, it adds a strike, and the player gets notified about the error. */
     verifyGuess: function() {
-        if (this.game.guess === this.game.target) {
+        if (this.game.guess.toLowerCase() === this.game.target) {
           this.game.points++
           if (this.game.points >= 10) {
             this.game.message = 'You Win!'
@@ -110,7 +110,7 @@ const app = Vue.createApp({
           that.game.points = 0
           that.game.strikes = 0
           that.game.passes = 3
-          that.game.words = ['apple', 'banana', 'cherry', 'strawberry', 'guava', 'watermelon', 'kiwi', 'cantaloupe', 'pineapple', 'orange']
+          that.game.words = ['apple', 'banana', 'cherry', 'strawberry', 'guava', 'watermelon', 'kiwi', 'cantaloupe', 'pineapple', 'orange', 'raspberry', 'dragonfruit', 'starfruit', 'pomegranate', 'honeydew', 'jackfruit', 'blackberry', 'grape', 'pear']
           that.randomizeTarget() 
           that.game.message = 'Unscramble the word'
       }, 2000)

@@ -97,6 +97,7 @@ button.play {
     border-radius: 10px;
     border: 2px solid rgb(255, 239, 17);
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 .message {
