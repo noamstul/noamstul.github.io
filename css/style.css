@@ -78,6 +78,7 @@ h1 {
     line-height: 4rem;
     font-family: "Cascadia Code", sans-serif;
     font-weight: 500;
+    color: #fff;
 }
 
 h2 {
@@ -199,6 +200,21 @@ background: linear-gradient(270deg, rgba(17, 63, 99, 0.81) 0%, rgba(3, 13, 20, 1
     }
 }
 
+.custom-button {
+    background-color: #040F17;
+    border: 2px solid #113F63;
+    color: #fff !important;
+    font-size: 18   px;
+
+    &:hover {
+       background-color:  #113F63;
+    }
+
+    &:visited {
+        color: #fff;
+    }
+}
+
 /* styling the about page for mobile */
 
 .about-title {
@@ -210,6 +226,7 @@ background: linear-gradient(270deg, rgba(17, 63, 99, 0.81) 0%, rgba(3, 13, 20, 1
 .about-main {
     background: #113F63;
 background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100%);
+min-height: 81vh;
 }
 
 .about-body {
@@ -228,12 +245,8 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
 }
 
 .about-image img {
-    border: 5px solid #113F63;
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    object-position: 55% 50%;
+    max-width: 350px;
+    max-height: 350px;
 }
 
 /* styling the portfolio for mobile */
@@ -241,49 +254,16 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
     margin-bottom: 5rem;
 }
 
-.portfolio {
-    margin: 1rem 2rem;
+.portfolio-main {
+    background: #113F63;
+background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100%);
+min-height: 81vh;
+padding: 5px;
 }
 
 .portfolio h1 {
     text-align: center;
     margin-bottom: 1rem;
-}
-
-.portfolio h2 {
-    text-align: center;
-    margin: 1.5rem 0;
-}
-
-.portfolio-links {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-    padding: 2rem 0rem;
-}
-
-.portfolio-links a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.portfolio-links a:hover {
-    animation: buttongrow 0.3s ease-in 0s 1 forwards;
-}
-
-.portfolio-links img {
-    width: 30%;
-    max-width: 115px;
-}
-
-.banner {
-    font-size: 2rem;
-    text-align: center;
-    padding: 2rem 0rem;
-    margin: 3rem 0rem 1rem 0rem;
-    color: white;
-    background-color: #493ad3;
 }
 
 .external-link {
@@ -310,40 +290,46 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
     animation-fill-mode: forwards;
 }
 
-.creative-kosher p {
-    margin-bottom: 1.5rem;
-}
-
-#graphics-carousel {
-    max-width: 400px;
-    margin: auto;
-}
-
-.videography-video {
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-}
-
-.videography-video iframe {
-    width: 100%;
-    height: 250px;
-    margin-bottom: 1rem;
-}
-
-.user-experience-images {
+.p-cards-container {
+    margin: 0rem 2rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 9px;
+    align-items: center;
+    justify-content: center;
 }
 
-.user-experience-images img {
-    width: 50%;
+.p-card {
+    max-width: 300px;
+    background-color: #091E2E;
+
+    width: 280px;
+    min-height: 360px;
+   padding: 10px 15px;
+    border: 2px solid #113F63;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .p-card-header > h2 {
+        color: #fff;
+        font-family: "Cascadia Code", sans-serif;
+    }
+
+    .p-card-footer {
+        justify-self: flex-end;
+    }
 }
 
 /* styling the contact page for mobile */
 
 .main-contact {
-    margin: 1rem 2rem auto;
+    padding: 1rem 2rem;
+    background: #113F63;
+background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100%);
+min-height: 81vh;
 }
 
 .main-contact h1 {
@@ -429,7 +415,7 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
     /* styling the landing page for tablet */
     
     footer p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     /* styling the about page for tablet */
@@ -472,7 +458,7 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
     }
 
     .portfolio {
-        margin: 4rem auto;
+        padding: 4rem ;
         width: 768px;
     }
 
@@ -537,8 +523,8 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
 
     /* contact form for tablet */
     .main-contact {
-        margin: 3rem auto;
-        width: 768px;
+        padding: 3rem;
+        min-width: 768px;
     }
 
     .main-contact p {
@@ -556,7 +542,7 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
     /* landing page for desktop */
 
     footer p {
-        font-size: 1.75rem;
+        font-size: 1rem;
     }
 
     /* about page for desktop */
@@ -568,18 +554,17 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
     .about-body {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: no-wrap;
     }
 
     /* portfolio for desktop */
 
     .portfolio {
-        margin: 5rem auto;
-        width: 992px;
-    }
-
-    .portfolio-intro p {
-        margin: 1.5rem 0 1.5rem 0;
+        padding: 5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .user-experience-main {
@@ -632,7 +617,7 @@ background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100
     /* contact page for desktop */
 
     .main-contact {
-        margin: 5rem auto;
-        width: 992px;
+        padding: 5rem;
+        min-width: 992px;
     }
 }
