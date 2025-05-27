@@ -291,7 +291,7 @@ padding: 5px;
 }
 
 .p-cards-container {
-    margin: 0rem 2rem;
+    margin: 0rem 2rem 2rem 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -349,10 +349,12 @@ min-height: 81vh;
     justify-content: center;
     width: 300px;
     height: 300px;
-    background-color: #493ad3;
+    background-color: #091e2e;
     margin: auto;
     border-radius: 5px;
-    box-shadow: 0px 8px 10px rgb(119, 119, 119);
+    padding: 10px 15px;
+    border-radius: 5px;
+    gap: 40px;
 }
 
 .contact-info a {
