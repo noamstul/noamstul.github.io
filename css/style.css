@@ -32,6 +32,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+:root {
+  --animate-delay: 0.5s;
+}
 body {
 	line-height: 1;
 }
