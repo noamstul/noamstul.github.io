@@ -356,8 +356,8 @@ footer img {
 }
 
 .about-image img {
-	max-width: 350px;
-	max-height: 350px;
+	max-width: 200px;
+	max-height: 200px;
 }
 
 /* styling the portfolio for mobile */
@@ -629,6 +629,11 @@ footer img {
 		flex-direction: row;
 		flex-wrap: no-wrap;
 	}
+
+    .about-image img {
+	max-width: 350px;
+	max-height: 350px;
+}
 
 	/* portfolio for desktop */
 
