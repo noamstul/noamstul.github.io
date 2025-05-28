@@ -112,13 +112,6 @@ section {
 	display: block;
 }
 
-:root {
-	--animate-delay: 0.3s;
-	--dark-blue: #091e2e;
-	--lighter-blue: #113f63;
-	--white-heat: #fff;
-}
-
 body {
 	line-height: 1;
 }
@@ -144,17 +137,23 @@ table {
 /* css reset ends, begins setting up basic styling for h1s etc*/
 html {
 	scroll-behavior: smooth;
-	height: 100%;
-	margin: 0; /* Remove default body margin */
-	padding: 0; /* Remove default body padding */
 }
 
-/* .cascadia-code-style {
-  font-family: "Cascadia Code", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-} */
+:root {
+	--animate-delay: 0.3s; /* Default for Animate.css if not overridden */
+	--dark-blue: #091e2e;
+	--lighter-blue: #113f63;
+	--white-heat: #fff; /* Renamed to more descriptive --white */
+
+	/* Re-using a more common name for consistency */
+	--primary-text-color: var(--white-heat); /* For main content text */
+	--secondary-text-color: #040f17; /* For dark buttons, etc. */
+
+	/* Button colors */
+	--button-bg-dark: #040f17;
+	--button-border-light: var(--lighter-blue);
+	--button-hover-bg: var(--lighter-blue);
+}
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
@@ -178,7 +177,7 @@ img {
 
 h1 {
 	font-size: 2.5rem;
-	line-height: 4rem;
+	line-height: 1.2;
 	font-family: 'Cascadia Code', sans-serif;
 	font-weight: 500;
 	color: #fff;
@@ -201,11 +200,11 @@ h4 {
 
 p {
 	font-size: 1.2rem;
-	color: #fff;
+	color: var(--primary-text-color);
 }
 
 em {
-	font-weight: bold;
+	font-style: italic;
 }
 
 strong {
@@ -300,29 +299,18 @@ footer img {
 	line-height: 5rem;
 }
 
-#landing-button {
-	background-color: #040f17;
-	border: 2px solid var(--lighter-blue);
-	color: #fff;
-	font-size: 18 px;
+.custom-button,
+#landing-button { /* Apply these styles to both */
+	background-color: var(--button-bg-dark);
+	border: 2px solid var(--button-border-light);
+	color: var(--primary-text-color) !important;
+	font-size: 1.125rem; /* Equivalent to 18px */
+	padding: 0.75rem 1.5rem; /* Add some padding for better click area */
+	transition: background-color 0.3s ease; /* Smooth hover transition */
 
 	&:hover {
-		background-color: var(--lighter-blue);
-	}
-}
-
-.custom-button {
-	background-color: #040f17;
-	border: 2px solid var(--lighter-blue);
-	color: #fff !important;
-	font-size: 18 px;
-
-	&:hover {
-		background-color: var(--lighter-blue);
-	}
-
-	&:visited {
-		color: #fff;
+		background-color: var(--button-hover-bg);
+		border-color: var(--button-hover-bg); /* Match border color on hover */
 	}
 }
 
