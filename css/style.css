@@ -134,23 +134,25 @@ footer {
     font-family: "Inter", sans-serif;
     font-size: 2rem;
     color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
     padding: 1rem;
 }
 
 footer a {
     width: 50px;
+    justify-self:end;
 }
 
-footer a:nth-child(1) {
-    align-self: flex-start;
+footer p {
+    grid-column: 2 / 3;
+    place-self: center;
 }
 
 footer img {
     width: 100%;
+    
 }
 
 /* universal stylings done, now onto the landing page */
