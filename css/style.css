@@ -57,6 +57,9 @@ table {
 /* css reset ends, begins setting up basic styling for h1s etc*/
 html {
     scroll-behavior: smooth;
+    height: 100%;
+    margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
 }
 
 
@@ -71,7 +74,17 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #ffffff;
     line-height: 2.2rem;
+    height: 100%;
+    margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
 }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column; /* Stacks header, main, footer vertically */
+  min-height: 100vh; /* Ensures the wrapper is at least the full viewport height */
+}
+
 img {
     width: 100%;
     display: block;
@@ -113,6 +126,10 @@ strong {
     font-weight: bold;
 }
 
+header, footer {
+    flex-shrink: 0;
+}
+
 /*I'll be using a combination of Bootstrap and CSS to style this site */
 #navbar.navbar {
     background-color: #091E2E;
@@ -130,7 +147,6 @@ a:visited,
 a:hover,
 a:active{
     text-decoration: none;
-    color: black;
 }
 
 footer {
@@ -164,15 +180,18 @@ footer img {
     background-image: url('../images/landing-bg.png');
     background-size: cover;
     background-position: 50% 60%;
-    height: 100vh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .landing-main {
     /* background-image: url("../images/Untitled-1.png"); */
     background: #113F63;
 background: linear-gradient(270deg, rgba(17, 63, 99, 0.81) 0%, rgba(3, 13, 20, 1) 100%);
-    margin: auto;
-    height: 100vh;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     
 }
 .landing-header {
@@ -232,7 +251,7 @@ background: linear-gradient(270deg, rgba(17, 63, 99, 0.81) 0%, rgba(3, 13, 20, 1
 .about-main {
     background: #113F63;
 background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100%);
-min-height: 81vh;
+flex-grow: 1;
 }
 
 .about-body {
@@ -263,7 +282,6 @@ min-height: 81vh;
 .portfolio-main {
     background: #113F63;
 background: linear-gradient(0deg, rgba(17, 63, 99, 1) 0%, rgba(3, 13, 20, 1) 100%);
-min-height: 81vh;
 padding: 5px;
 }
 
@@ -556,7 +574,7 @@ min-height: 81vh;
     /* about page for desktop */
 
     .about-main {
-        padding: 5rem;
+        padding: 2rem 5rem;
     }
 
     .about-body {
@@ -568,7 +586,7 @@ min-height: 81vh;
     /* portfolio for desktop */
 
     .portfolio {
-        padding: 5rem;
+        padding: 2rem 5rem;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -625,7 +643,7 @@ min-height: 81vh;
     /* contact page for desktop */
 
     .main-contact {
-        padding: 5rem;
+        padding: 2rem 5rem;
         min-width: 992px;
     }
 }

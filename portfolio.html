@@ -15,74 +15,76 @@
 		<title>Noam Stulberg's Portfolio</title>
 	</head>
 	<body>
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark fluid-top" id="navbar">
-				<a href="index.html" class="navbar-brand">
-                    <span class="d-none">Go to home</span>
-					<img src="images/logo-white-mstr.svg" alt="A hexagon shaped logo featuring the initials N and S" style="height: 50px; width: 50px" />
-				</a>
-				<button class="navbar-toggler" data-toggle="collapse" data-target="#mynav" aria-role="menu">
-                    <span class="d-none">Menu button</span>
-					<!-- adding an icon for the toggler button -->
-					<span class="navbar-toggler-icon"> </span>
-				</button>
-				<!-- the main nav needs to placed within a .navbar-nav container in order to function -->
-				<div id="mynav" class="collapse navbar-collapse">
-					<div class="navbar-nav ml-auto">
-						<a href="about.html" class="nav-link">About</a>
-						<a href="portfolio.html" class="nav-link active">Porfolio</a>
-						<a href="contact.html" class="nav-link">Contact</a>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<main>
-			<div class="portfolio-main">
-				<div class="portfolio portfolio-intro">
-					<h1 class="animate__animated animate__fadeInUp">Portfolio</h1>
-					<p class="text-center animate__animated animate__fadeInUp">Check out some of my latest work below.</p>
-				</div>
-				<div class="p-cards-container">
-					<div class="p-card animate__animated animate__fadeInUp animate__delay">
-						<div class="p-card-header">
-							<h2 class="text-center">Quiz Game</h2>
-						</div>
-						<div class="p-card-body">
-							<p>A Jeopardy-style quiz game built on Vue3. Can you answer all the questions correctly?</p>
-						</div>
-						<div class="p-card-footer">
-							<div class="d-flex justify-content-center"><a href="http://nsjeopardygame.netlify.app" target="_blank" class="btn btn-primary custom-button">Learn more</a></div>
-						</div>
-					</div>
-					<div class="p-card animate__animated animate__fadeInUp animate__delay">
-						<div class="p-card-header">
-							<h2 class="text-center">Scramble</h2>
-						</div>
-						<div class="p-card-body">
-							<p>A simple word scramble game. Get three wrong and you'll have to start over. Who knows how to spell cantaloupe anyway...?</p>
-						</div>
-						<div class="p-card-footer">
-							<div class="d-flex justify-content-center"><a href="scramble/index.html" target="_blank" class="btn btn-primary custom-button">Learn more</a></div>
-						</div>
-					</div>
-					<div class="p-card animate__animated animate__fadeInUp animate__delay">
-						<div class="p-card-header">
-							<h2 class="text-center">Clock</h2>
-						</div>
-						<div class="p-card-body">
-							<p>A clock application that fetch's Nasa's astronomical photo of the day. Come back every day to see a new picture.</p>
-						</div>
-						<div class="p-card-footer">
-							<div class="d-flex justify-content-center"><a href="clock/index.html" target="_blank" class="btn btn-primary custom-button">Learn more</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer>
-			<p>&copy; 2025 Noam Stulberg</p>
-			<a href="#top"><span class="d-none">Go to top</span><img src="images/up-arrow.svg" alt="up arrow" /></a>
-		</footer>
+		<div class="page-wrapper">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-dark fluid-top" id="navbar">
+                    <a href="index.html" class="navbar-brand">
+                                <span class="d-none">Go to home</span>
+                        <img src="images/logo-white-mstr.svg" alt="A hexagon shaped logo featuring the initials N and S" style="height: 50px; width: 50px" />
+                    </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav" aria-role="menu">
+                                <span class="d-none">Menu button</span>
+                        <!-- adding an icon for the toggler button -->
+                        <span class="navbar-toggler-icon"> </span>
+                    </button>
+                    <!-- the main nav needs to placed within a .navbar-nav container in order to function -->
+                    <div id="mynav" class="collapse navbar-collapse">
+                        <div class="navbar-nav ml-auto">
+                            <a href="about.html" class="nav-link">About</a>
+                            <a href="portfolio.html" class="nav-link active">Porfolio</a>
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div class="portfolio-main">
+                    <div class="portfolio portfolio-intro">
+                        <h1 class="animate__animated animate__fadeInUp">Portfolio</h1>
+                        <p class="text-center animate__animated animate__fadeInUp">Check out some of my latest work below.</p>
+                    </div>
+                    <div class="p-cards-container">
+                        <div class="p-card animate__animated animate__fadeInUp animate__delay">
+                            <div class="p-card-header">
+                                <h2 class="text-center">Quiz Game</h2>
+                            </div>
+                            <div class="p-card-body">
+                                <p>A Jeopardy-style quiz game built on Vue3. Can you answer all the questions correctly?</p>
+                            </div>
+                            <div class="p-card-footer">
+                                <div class="d-flex justify-content-center"><a href="http://nsjeopardygame.netlify.app" target="_blank" class="btn btn-primary custom-button">Learn more</a></div>
+                            </div>
+                        </div>
+                        <div class="p-card animate__animated animate__fadeInUp animate__delay">
+                            <div class="p-card-header">
+                                <h2 class="text-center">Scramble</h2>
+                            </div>
+                            <div class="p-card-body">
+                                <p>A simple word scramble game. Get three wrong and you'll have to start over. Who knows how to spell cantaloupe anyway...?</p>
+                            </div>
+                            <div class="p-card-footer">
+                                <div class="d-flex justify-content-center"><a href="scramble/index.html" target="_blank" class="btn btn-primary custom-button">Learn more</a></div>
+                            </div>
+                        </div>
+                        <div class="p-card animate__animated animate__fadeInUp animate__delay">
+                            <div class="p-card-header">
+                                <h2 class="text-center">Clock</h2>
+                            </div>
+                            <div class="p-card-body">
+                                <p>A clock application that fetch's Nasa's astronomical photo of the day. Come back every day to see a new picture.</p>
+                            </div>
+                            <div class="p-card-footer">
+                                <div class="d-flex justify-content-center"><a href="clock/index.html" target="_blank" class="btn btn-primary custom-button">Learn more</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; 2025 Noam Stulberg</p>
+                <a href="#top"><span class="d-none">Go to top</span><img src="images/up-arrow.svg" alt="up arrow" /></a>
+            </footer>
+        </div>
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

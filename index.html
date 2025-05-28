@@ -16,36 +16,38 @@
 		<title>Noam Stulberg's Portfolio</title>
 	</head>
 	<body>
-		<header>
-			<nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
-				<a href="index.html" class="navbar-brand">
-                    <span class="d-none">Go to home</span>
-					<img src="images/logo-white-mstr.svg" alt="A hexagon shaped logo featuring the initials N and S" style="height: 50px; width: 50px" />
-				</a>
-				<button class="navbar-toggler" data-toggle="collapse" data-target="#mynav" aria-role="menu">
-                    <span class="d-none">Menu button</span>
-					<!-- adding an icon for the toggler button -->
-					<span class="navbar-toggler-icon"> </span>
-				</button>
-				<!-- the main nav needs to placed within a .navbar-nav container in order to function -->
-				<div id="mynav" class="collapse navbar-collapse">
-					<div class="navbar-nav ml-auto">
-						<a href="about.html" class="nav-link">About</a>
-						<a href="portfolio.html" class="nav-link">Porfolio</a>
-						<a href="contact.html" class="nav-link">Contact</a>
-					</div>
-				</div>
-			</nav>
-		</header>
-		<main class="landing-bg">
-			<div class="landing-main">
-				<header class="landing-header ml-2">
-					<h1 class="landing-h1 animate__animated animate__fadeInUp">Noam Stulberg</h1>
-					<h2 class="landing-h2 animate__animated animate__fadeInUp animate__delay-1s">Web Developer</h2>
-					<a href="/about.html" id="landing-button" class="btn btn-primary mt-4 animate__animated animate__fadeInUp animate__delay-2s">Learn More</a>
-				</header>
-			</div>
-		</main>
+		<div class="page-wrapper">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
+                    <a href="index.html" class="navbar-brand">
+                                <span class="d-none">Go to home</span>
+                        <img src="images/logo-white-mstr.svg" alt="A hexagon shaped logo featuring the initials N and S" style="height: 50px; width: 50px" />
+                    </a>
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#mynav" aria-role="menu">
+                                <span class="d-none">Menu button</span>
+                        <!-- adding an icon for the toggler button -->
+                        <span class="navbar-toggler-icon"> </span>
+                    </button>
+                    <!-- the main nav needs to placed within a .navbar-nav container in order to function -->
+                    <div id="mynav" class="collapse navbar-collapse">
+                        <div class="navbar-nav ml-auto">
+                            <a href="about.html" class="nav-link">About</a>
+                            <a href="portfolio.html" class="nav-link">Porfolio</a>
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main class="landing-bg">
+                <div class="landing-main">
+                    <header class="landing-header ml-2">
+                        <h1 class="landing-h1 animate__animated animate__fadeInUp">Noam Stulberg</h1>
+                        <h2 class="landing-h2 animate__animated animate__fadeInUp animate__delay-1s">Web Developer</h2>
+                        <a href="/about.html" id="landing-button" class="btn btn-primary mt-4 animate__animated animate__fadeInUp animate__delay-2s">Learn More</a>
+                    </header>
+                </div>
+            </main>
+        </div>
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
