@@ -361,12 +361,14 @@ footer img {
 
 .p-cards-container {
 	margin: 0rem 2rem 2rem 2rem;
+	margin-inline: auto;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 9px;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+	max-width: 900px;
 }
 
 .p-card {
@@ -637,4 +639,6 @@ footer img {
 		padding: 2rem 5rem;
 		min-width: 992px;
 	}
+
+	
 }

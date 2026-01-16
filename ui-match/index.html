@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Rideshark Test</title>
+</head>
+<body>
+    <i class="help fas fa-question-circle"></i>
+    <header class="header">
+        <h1>Logged Commutes</h1>
+        <section class="progress-tracker">
+            <div class="progress-indicator">
+                <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" />
+                    <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">78%</text>
+                    </svg>
+            </div>
+            <div class="tracker-text">
+                <h2>Great job!</h2>
+                <p>You're doing pretty well, 10 days to goal, keep going!</p>
+            </div>
+        </section>
+    </header>
+    <main class="app-main">
+        <section class="calendar">
+            <div class="calendar-container">
+                <div class="calendar-head">
+                    <a onclick="previous()">
+                        <i class="fas fa-chevron-circle-left"></i>
+                    </a>
+                    <h3 class="month-year" id="month-year"></h3>
+                    <a onclick="next()">
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </a>
+                </div>
+                <table class="calendar-inner">
+                    <thead>
+                        <tr>
+                            <th>S</th>
+                            <th>M</th>
+                            <th>T</th>
+                            <th>W</th>
+                            <th>T</th>
+                            <th>F</th>
+                            <th>S</th>
+                        </tr>
+                    </thead>
+                    <tbody class="calendar-body" id="calendar-body">
+                
+                    </tbody>
+                </table>
+                <a href="#" class="stats">View My Stats <i class="fas fa-long-arrow-alt-right"></i></a>
+            </div>
+        </section>
+        <section class="trip-log">
+            <div class="log-header">
+                <h4>Trips taken</h4>
+                <h4 class="selected-date" id="selected-date"></h4>
+            </div>
+            <div class="log-main">
+                <div class="log-details">
+                    <div class="log-item">
+                        <div class="log-item-description">
+                            <i class="fas fa-car"></i>
+                            <p>Drove Carpool</p>
+                        </div>
+                        <div class="log-item-actions">
+                            <i class="fas fa-pen"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="log-item">
+                        <div class="log-item-description">
+                            <i class="fas fa-car"></i>
+                            <p>Single Passenger</p>
+                        </div>
+                        <div class="log-item-actions">
+                            <i class="fas fa-pen"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button class="log-button">Log A Trip</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

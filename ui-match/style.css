@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS reset ends
+Styling the basic elements of the page
+*/
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(59, 59, 59);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: rgb(59, 59, 59);
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(59, 59, 59);
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: rgb(59, 59, 59);
+}
+
+/*Styling the header and progress tracker*/
+
+header {
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.help {
+    border-radius: 50%;
+    border: none;
+    color: grey;
+    background-color: white;
+    font-weight: 700;
+    position: absolute;
+    margin: 0.5rem;
+    right: 0;
+}
+
+.progress-tracker {
+    background: rgb(32,186,255);
+    background: linear-gradient(90deg, rgba(32,186,255,0.20210090872286413) 0%, rgba(254,228,215,1) 100%);
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.progress-indicator {
+    margin-right: 1rem;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 123, 0, 0.158);
+    width: 112px;
+    height: 112px;
+}
+
+circle {
+    fill: rgba(255, 154, 3, 0);
+    stroke: rgb(240, 137, 3);
+    stroke-width: 10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    transform: translate(-2px, -2px);
+    animation: rotate 5s linear 0.5;
+  }
+
+text {
+    fill: black;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+  
+@keyframes rotate {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.tracker-text p {
+    color: rgb(124, 124, 124);
+    font-size: 1.2rem;
+}
+
+/*Styles for the calendar section*/
+
+.calendar {  
+    background-color: #f5f5f5;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: auto;
+    width: 380px;
+}
+
+.calendar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid rgb(59, 59, 59);;
+}
+
+.calendar thead th {
+    padding-top: 0.4rem;
+}
+
+.fa-chevron-circle-right, .fa-chevron-circle-left {
+    font-size: 1.4rem;
+    transition-duration: 0.2s;
+    color: rgb(59, 59, 59);
+}
+
+.fa-chevron-circle-right:hover, .fa-chevron-circle-left:hover {
+    cursor: pointer;
+    color: rgb(240, 137, 3);
+}
+
+.calendar-body tr {
+    text-align: center;
+}
+
+.calendar-body td {
+    height: 45px;
+    vertical-align: middle;
+}
+
+td:hover {
+    border-radius: 50%;
+    background-color: rgb(212, 212, 212);
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+.current-day {
+    background-color: rgb(119, 219, 209);
+    border-radius: 50%;
+}
+
+.stats {
+    text-decoration: none;
+    text-align: center;
+    margin: 2rem;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.stats:hover {
+    text-decoration: underline solid black;
+}
+
+/* Log section */
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.log-button {
+    font-size: 1.2rem;
+    background-color: rgb(240, 137, 3);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    transition-duration: 0.3s;
+    width: 250px;
+}
+
+.log-button:hover {
+    background-color: #f5f5f5;
+    color: rgb(240, 137, 3);
+    cursor: pointer;
+}
+
+.trip-log {
+    display: flex;
+    flex-direction: column;
+    padding: 2.1rem;
+    margin: 0 auto;
+    width: 380px;
+}
+
+.log-header {
+    border-bottom: 2px solid rgb(59, 59, 59);;
+    margin-bottom: 4rem;
+    padding-bottom: 0.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.log-item {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.4rem;
+    border-radius: 500px;
+    margin-bottom: 0.5rem;
+}
+
+.log-item-description {
+    display: flex;
+}
+
+.log-item-description p {
+    color: rgb(124, 124, 124);
+}
+
+.fa-car {
+    font-size: 1.2rem;
+    padding-right: 1rem;
+}
+
+.fa-pen, .fa-times {
+    font-size: 0.7rem;
+    padding-right: 1rem;
+}
+
+/*Media queries*/
+
+@media(min-width: 768px) {
+    .app-main {
+        display: flex;
+        flex-direction: row;
+    }
+    .calendar {
+        width: 50%;
+    }
+
+    header > h1 {
+        margin-left: 3rem;  
+    }
+}
+
+@media(min-width: 1200px) {
+    header > h1 {
+        margin-left: 11rem;  
+    }
+}
